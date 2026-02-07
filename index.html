@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2ed573">
+    <meta name="description" content="평수, 온도, 무게 등 다양한 단위를 실시간으로 변환합니다.">
+    <title>단위 변환기 Pro</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232ed573' width='192' height='192'/><text x='50%' y='50%' font-size='100' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>⇄</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232ed573' width='192' height='192'/><text x='50%' y='50%' font-size='100' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>⇄</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Banner Ad -->
+    <div class="ad-container ad-top">
+        <div class="ad-placeholder">광고 영역</div>
+    </div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>단위 변환기 Pro</h1>
+            <p class="subtitle">실시간 단위 변환</p>
+        </header>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="length">길이</button>
+            <button class="tab-btn" data-category="weight">무게</button>
+            <button class="tab-btn" data-category="temperature">온도</button>
+            <button class="tab-btn" data-category="volume">부피</button>
+            <button class="tab-btn" data-category="area">넓이</button>
+            <button class="tab-btn" data-category="speed">속도</button>
+        </div>
+
+        <!-- Conversion Container -->
+        <main class="converter-main">
+            <!-- Length Tab -->
+            <div class="category-content active" id="length-content">
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label for="length-input-1">평 (pyeong)</label>
+                        <input type="number" id="length-input-1" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">평</span>
+                    </div>
+                    <div class="swap-btn">⇄</div>
+                    <div class="input-group">
+                        <label for="length-input-2">제곱미터 (㎡)</label>
+                        <input type="number" id="length-input-2" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">㎡</span>
+                    </div>
+                </div>
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label>킬로미터 (km)</label>
+                        <input type="number" class="unit-input length-variant" data-unit="km" placeholder="0" step="0.01">
+                        <span class="unit-label">km</span>
+                    </div>
+                    <div class="separator-text">또는</div>
+                    <div class="input-group">
+                        <label>미터 (m)</label>
+                        <input type="number" class="unit-input length-variant" data-unit="m" placeholder="0" step="0.01">
+                        <span class="unit-label">m</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weight Tab -->
+            <div class="category-content" id="weight-content">
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label for="weight-input-1">킬로그램 (kg)</label>
+                        <input type="number" id="weight-input-1" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">kg</span>
+                    </div>
+                    <div class="swap-btn">⇄</div>
+                    <div class="input-group">
+                        <label for="weight-input-2">파운드 (lb)</label>
+                        <input type="number" id="weight-input-2" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">lb</span>
+                    </div>
+                </div>
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label>돈 (don - 전통)</label>
+                        <input type="number" class="unit-input weight-variant" data-unit="don" placeholder="0" step="0.1">
+                        <span class="unit-label">돈</span>
+                    </div>
+                    <div class="separator-text">또는</div>
+                    <div class="input-group">
+                        <label>냥 (nyang - 전통)</label>
+                        <input type="number" class="unit-input weight-variant" data-unit="nyang" placeholder="0" step="0.01">
+                        <span class="unit-label">냥</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Temperature Tab -->
+            <div class="category-content" id="temperature-content">
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label for="temp-input-1">섭씨 (℃)</label>
+                        <input type="number" id="temp-input-1" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">℃</span>
+                    </div>
+                    <div class="swap-btn">⇄</div>
+                    <div class="input-group">
+                        <label for="temp-input-2">화씨 (℉)</label>
+                        <input type="number" id="temp-input-2" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">℉</span>
+                    </div>
+                </div>
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label>켈빈 (K)</label>
+                        <input type="number" class="unit-input temp-variant" data-unit="k" placeholder="0" step="0.01">
+                        <span class="unit-label">K</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volume Tab -->
+            <div class="category-content" id="volume-content">
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label for="volume-input-1">리터 (L)</label>
+                        <input type="number" id="volume-input-1" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">L</span>
+                    </div>
+                    <div class="swap-btn">⇄</div>
+                    <div class="input-group">
+                        <label for="volume-input-2">갤런 (gal)</label>
+                        <input type="number" id="volume-input-2" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">gal</span>
+                    </div>
+                </div>
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label>되 (doe - 전통)</label>
+                        <input type="number" class="unit-input volume-variant" data-unit="doe" placeholder="0" step="0.1">
+                        <span class="unit-label">되</span>
+                    </div>
+                    <div class="separator-text">또는</div>
+                    <div class="input-group">
+                        <label>홉 (hop - 전통)</label>
+                        <input type="number" class="unit-input volume-variant" data-unit="hop" placeholder="0" step="0.01">
+                        <span class="unit-label">홉</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Area Tab -->
+            <div class="category-content" id="area-content">
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label for="area-input-1">제곱미터 (㎡)</label>
+                        <input type="number" id="area-input-1" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">㎡</span>
+                    </div>
+                    <div class="swap-btn">⇄</div>
+                    <div class="input-group">
+                        <label for="area-input-2">평 (pyeong)</label>
+                        <input type="number" id="area-input-2" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">평</span>
+                    </div>
+                </div>
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label>에이커 (acre)</label>
+                        <input type="number" class="unit-input area-variant" data-unit="acre" placeholder="0" step="0.01">
+                        <span class="unit-label">acre</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speed Tab -->
+            <div class="category-content" id="speed-content">
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label for="speed-input-1">시간당 킬로미터 (km/h)</label>
+                        <input type="number" id="speed-input-1" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">km/h</span>
+                    </div>
+                    <div class="swap-btn">⇄</div>
+                    <div class="input-group">
+                        <label for="speed-input-2">시간당 마일 (mph)</label>
+                        <input type="number" id="speed-input-2" class="unit-input" placeholder="0" step="0.01">
+                        <span class="unit-label">mph</span>
+                    </div>
+                </div>
+                <div class="unit-row">
+                    <div class="input-group">
+                        <label>초당 미터 (m/s)</label>
+                        <input type="number" class="unit-input speed-variant" data-unit="ms" placeholder="0" step="0.01">
+                        <span class="unit-label">m/s</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Favorites & History Section -->
+        <section class="favorites-section">
+            <div class="section-header">
+                <h2>즐겨찾기</h2>
+                <button class="toggle-btn" id="favorites-toggle">▼</button>
+            </div>
+            <div class="favorites-list" id="favorites-list"></div>
+            <button class="add-favorite-btn" id="add-favorite-btn">⭐ 현재 단위 저장</button>
+        </section>
+
+        <!-- Recent Conversions -->
+        <section class="history-section">
+            <div class="section-header">
+                <h2>최근 변환</h2>
+                <button class="toggle-btn" id="history-toggle">▼</button>
+            </div>
+            <div class="history-list" id="history-list"></div>
+            <button class="clear-history-btn" id="clear-history-btn">기록 삭제</button>
+        </section>
+
+        <!-- Premium Content Button -->
+        <button class="premium-btn" id="premium-btn">
+            <span class="premium-icon">✨</span>
+            고급 단위 변환 보기
+        </button>
+    </div>
+
+    <!-- Bottom Banner Ad -->
+    <div class="ad-container ad-bottom">
+        <div class="ad-placeholder">광고 영역</div>
+    </div>
+
+    <!-- Interstitial Ad Modal (shown occasionally) -->
+    <div class="ad-modal" id="ad-modal" style="display: none;">
+        <div class="ad-modal-content">
+            <div class="ad-countdown">
+                <span id="ad-countdown-text">광고를 보는 중입니다... <strong id="countdown-num">5</strong>초</span>
+            </div>
+            <div class="ad-placeholder">전면 광고 영역</div>
+            <button class="ad-close-btn" id="ad-close-btn" style="display: none;">닫기</button>
+        </div>
+    </div>
+
+    <!-- Premium Content Modal -->
+    <div class="premium-modal" id="premium-modal" style="display: none;">
+        <div class="premium-modal-content">
+            <button class="premium-close-btn" id="premium-close-btn">✕</button>
+            <h2>고급 단위 변환</h2>
+            <div id="premium-content"></div>
+        </div>
+    </div>
+
+    <script src="js/conversion-data.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(e => console.log('SW error:', e));
+        }
+    </script>
+</body>
+</html>
