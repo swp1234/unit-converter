@@ -1,0 +1,88 @@
+{
+  "app": {
+    "title": "单位转换器 Pro - 面积·温度·重量转换 | 支持 40+ 个单位",
+    "description": "跨6个类别实时转换40个以上的单位，包括面积计算、温度转换、重量转换等！支持韩国传统单位（平、钱、两、斗）。包括历史记录和收藏夹功能。"
+  },
+  "header": {
+    "title": "单位转换器 Pro",
+    "subtitle": "实时单位转换"
+  },
+  "categories": {
+    "length": "长度",
+    "weight": "重量",
+    "temperature": "温度",
+    "volume": "体积",
+    "area": "面积",
+    "speed": "速度"
+  },
+  "units": {
+    "length": {
+      "pyeong": "平 (pyeong)",
+      "meter": "平方米 (㎡)",
+      "km": "公里 (km)",
+      "m": "米 (m)"
+    },
+    "weight": {
+      "kg": "公斤 (kg)",
+      "lb": "磅 (lb)",
+      "don": "钱 (don - 传统)",
+      "nyang": "两 (nyang - 传统)"
+    },
+    "temperature": {
+      "celsius": "摄氏度 (℃)",
+      "fahrenheit": "华氏度 (℉)",
+      "kelvin": "开尔文 (K)"
+    },
+    "volume": {
+      "liter": "升 (L)",
+      "gallon": "加仑 (gal)",
+      "doe": "斗 (doe - 传统)",
+      "hop": "合 (hop - 传统)"
+    },
+    "area": {
+      "square_meter": "平方米 (㎡)",
+      "pyeong": "平 (pyeong)",
+      "acre": "英亩 (acre)"
+    },
+    "speed": {
+      "kmh": "时速公里 (km/h)",
+      "mph": "时速英里 (mph)",
+      "ms": "米每秒 (m/s)"
+    }
+  },
+  "buttons": {
+    "swap": "⇄",
+    "or": "或",
+    "addFavorite": "⭐ 保存当前单位",
+    "clearHistory": "清除历史记录",
+    "premiumView": "查看高级转换",
+    "close": "✕"
+  },
+  "sections": {
+    "favorites": "收藏夹",
+    "history": "最近转换",
+    "premiumTitle": "高级单位转换",
+    "recommendations": "也试试这些"
+  },
+  "recommendations": {
+    "shopping": {
+      "name": "全球购物计算器",
+      "desc": "汇率、税费、小费一次搞定！"
+    },
+    "taxrefund": {
+      "name": "税务退款预览",
+      "desc": "计算您的退款金额！"
+    },
+    "dday": {
+      "name": "D-Day 计数器",
+      "desc": "倒计时至重要日期！"
+    },
+    "lottery": {
+      "name": "彩票号码生成器",
+      "desc": "抽取您的幸运号码！"
+    }
+  },
+  "language": {
+    "select": "选择语言"
+  }
+}

@@ -380,8 +380,34 @@ class UnitConverterApp {
     }
 }
 
-// Initialize app
+// i18n 초기화 및 앱 시작
 let app;
-document.addEventListener('DOMContentLoaded', () => {
+(async function initI18n() {
+    await i18n.loadTranslations(i18n.getCurrentLanguage());
+    i18n.updateUI();
+
+    // 언어 선택기 설정
+    const langToggle = document.getElementById('lang-toggle');
+    const langMenu = document.getElementById('lang-menu');
+    const langOptions = document.querySelectorAll('.lang-option');
+
+    document.querySelector(`[data-lang="${i18n.getCurrentLanguage()}"]`)?.classList.add('active');
+
+    langToggle?.addEventListener('click', () => langMenu.classList.toggle('hidden'));
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.language-selector')) langMenu?.classList.add('hidden');
+    });
+
+    langOptions.forEach(opt => {
+        opt.addEventListener('click', async () => {
+            await i18n.setLanguage(opt.getAttribute('data-lang'));
+            langOptions.forEach(o => o.classList.remove('active'));
+            opt.classList.add('active');
+            langMenu.classList.add('hidden');
+        });
+    });
+
+    // 앱 시작
     app = new UnitConverterApp();
-});
+})();

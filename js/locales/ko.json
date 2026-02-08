@@ -1,0 +1,88 @@
+{
+  "app": {
+    "title": "단위 변환기 Pro - 평수·온도·무게 변환 | 40+ 단위 지원",
+    "description": "평수 계산, 온도 변환, 무게 변환 등 6개 카테고리 40+ 단위를 실시간 변환! 한국 전통 단위(평, 돈, 냥, 되) 지원. 히스토리, 즐겨찾기 기능 포함."
+  },
+  "header": {
+    "title": "단위 변환기 Pro",
+    "subtitle": "실시간 단위 변환"
+  },
+  "categories": {
+    "length": "길이",
+    "weight": "무게",
+    "temperature": "온도",
+    "volume": "부피",
+    "area": "넓이",
+    "speed": "속도"
+  },
+  "units": {
+    "length": {
+      "pyeong": "평 (pyeong)",
+      "meter": "제곱미터 (㎡)",
+      "km": "킬로미터 (km)",
+      "m": "미터 (m)"
+    },
+    "weight": {
+      "kg": "킬로그램 (kg)",
+      "lb": "파운드 (lb)",
+      "don": "돈 (don - 전통)",
+      "nyang": "냥 (nyang - 전통)"
+    },
+    "temperature": {
+      "celsius": "섭씨 (℃)",
+      "fahrenheit": "화씨 (℉)",
+      "kelvin": "켈빈 (K)"
+    },
+    "volume": {
+      "liter": "리터 (L)",
+      "gallon": "갤런 (gal)",
+      "doe": "되 (doe - 전통)",
+      "hop": "홉 (hop - 전통)"
+    },
+    "area": {
+      "square_meter": "제곱미터 (㎡)",
+      "pyeong": "평 (pyeong)",
+      "acre": "에이커 (acre)"
+    },
+    "speed": {
+      "kmh": "시간당 킬로미터 (km/h)",
+      "mph": "시간당 마일 (mph)",
+      "ms": "초당 미터 (m/s)"
+    }
+  },
+  "buttons": {
+    "swap": "⇄",
+    "or": "또는",
+    "addFavorite": "⭐ 현재 단위 저장",
+    "clearHistory": "기록 삭제",
+    "premiumView": "고급 단위 변환 보기",
+    "close": "✕"
+  },
+  "sections": {
+    "favorites": "즐겨찾기",
+    "history": "최근 변환",
+    "premiumTitle": "고급 단위 변환",
+    "recommendations": "이것도 해보세요"
+  },
+  "recommendations": {
+    "shopping": {
+      "name": "글로벌 쇼핑 계산기",
+      "desc": "환율, 관세, 팁 한번에!"
+    },
+    "taxrefund": {
+      "name": "연말정산 미리보기",
+      "desc": "환급액 시뮬레이션!"
+    },
+    "dday": {
+      "name": "D-Day 카운터",
+      "desc": "중요한 날까지 카운트다운!"
+    },
+    "lottery": {
+      "name": "복권 번호 생성기",
+      "desc": "행운의 번호를 뽑아보세요!"
+    }
+  },
+  "language": {
+    "select": "언어 선택"
+  }
+}

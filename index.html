@@ -9,11 +9,23 @@
     <meta name="description" content="평수 계산, 온도 변환, 무게 변환 등 6개 카테고리 40+ 단위를 실시간 변환! 한국 전통 단위(평, 돈, 냥, 되) 지원. 히스토리, 즐겨찾기 기능 포함.">
     <meta name="keywords" content="단위 변환기, 평수 계산, 제곱미터 변환, 온도 변환, 무게 변환, 길이 변환, 평 계산기, 한국 전통 단위">
     <title>단위 변환기 Pro - 평수·온도·무게 변환 | 40+ 단위 지원</title>
+    <script src="js/i18n.js"></script>
     <link rel="canonical" href="https://dopabrain.com/unit-converter/">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232ed573' width='192' height='192'/><text x='50%' y='50%' font-size='100' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>⇄</text></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232ed573' width='192' height='192'/><text x='50%' y='50%' font-size='100' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>⇄</text></svg>">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Language Selector Styles -->
+    <style>
+        .language-selector { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        .lang-btn { background: rgba(59,130,246,0.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(59,130,246,0.4); color: #fff; font-size: 20px; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; transition: all 0.2s ease; }
+        .lang-btn:hover { background: rgba(59,130,246,0.5); transform: scale(1.05); }
+        .lang-menu { position: absolute; top: 52px; right: 0; background: rgba(15,15,30,0.95); backdrop-filter: blur(20px); border: 1px solid rgba(59,130,246,0.3); border-radius: 12px; padding: 8px; min-width: 150px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+        .lang-menu.hidden { display: none; }
+        .lang-option { width: 100%; padding: 10px 14px; background: transparent; border: none; text-align: left; cursor: pointer; border-radius: 8px; font-size: 14px; color: #c8d0e8; transition: background 0.2s; }
+        .lang-option:hover { background: rgba(59,130,246,0.2); }
+        .lang-option.active { background: rgba(59,130,246,0.3); font-weight: 600; }
+    </style>
     <!-- Open Graph & Social Media Meta Tags -->
     <meta property="og:title" content="단위 변환기 Pro - 평수·온도·무게 한번에">
     <meta property="og:description" content="40+ 단위 실시간 변환! 평수 계산, 온도 변환, 한국 전통 단위 지원 ⇄">
@@ -42,6 +54,18 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
 </head>
 <body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button class="lang-btn" id="lang-toggle" title="Select Language">🌐</button>
+        <div class="lang-menu hidden" id="lang-menu">
+            <button class="lang-option" data-lang="ko">한국어</button>
+            <button class="lang-option" data-lang="en">English</button>
+            <button class="lang-option" data-lang="zh">简体中文</button>
+            <button class="lang-option" data-lang="hi">हिन्दी</button>
+            <button class="lang-option" data-lang="ru">Русский</button>
+        </div>
+    </div>
+
     <!-- Top Banner Ad -->
     <div class="ad-container ad-top">
         <div class="ad-placeholder">광고 영역</div>
@@ -50,18 +74,18 @@
     <div class="app-container">
         <!-- Header -->
         <header class="app-header">
-            <h1>단위 변환기 Pro</h1>
-            <p class="subtitle">실시간 단위 변환</p>
+            <h1 data-i18n="header.title">단위 변환기 Pro</h1>
+            <p class="subtitle" data-i18n="header.subtitle">실시간 단위 변환</p>
         </header>
 
         <!-- Category Tabs -->
         <div class="category-tabs">
-            <button class="tab-btn active" data-category="length">길이</button>
-            <button class="tab-btn" data-category="weight">무게</button>
-            <button class="tab-btn" data-category="temperature">온도</button>
-            <button class="tab-btn" data-category="volume">부피</button>
-            <button class="tab-btn" data-category="area">넓이</button>
-            <button class="tab-btn" data-category="speed">속도</button>
+            <button class="tab-btn active" data-category="length" data-i18n="categories.length">길이</button>
+            <button class="tab-btn" data-category="weight" data-i18n="categories.weight">무게</button>
+            <button class="tab-btn" data-category="temperature" data-i18n="categories.temperature">온도</button>
+            <button class="tab-btn" data-category="volume" data-i18n="categories.volume">부피</button>
+            <button class="tab-btn" data-category="area" data-i18n="categories.area">넓이</button>
+            <button class="tab-btn" data-category="speed" data-i18n="categories.speed">속도</button>
         </div>
 
         <!-- Conversion Container -->
@@ -232,59 +256,59 @@
         <!-- Favorites & History Section -->
         <section class="favorites-section">
             <div class="section-header">
-                <h2>즐겨찾기</h2>
+                <h2 data-i18n="sections.favorites">즐겨찾기</h2>
                 <button class="toggle-btn" id="favorites-toggle">▼</button>
             </div>
             <div class="favorites-list" id="favorites-list"></div>
-            <button class="add-favorite-btn" id="add-favorite-btn">⭐ 현재 단위 저장</button>
+            <button class="add-favorite-btn" id="add-favorite-btn" data-i18n="buttons.addFavorite">⭐ 현재 단위 저장</button>
         </section>
 
         <!-- Recent Conversions -->
         <section class="history-section">
             <div class="section-header">
-                <h2>최근 변환</h2>
+                <h2 data-i18n="sections.history">최근 변환</h2>
                 <button class="toggle-btn" id="history-toggle">▼</button>
             </div>
             <div class="history-list" id="history-list"></div>
-            <button class="clear-history-btn" id="clear-history-btn">기록 삭제</button>
+            <button class="clear-history-btn" id="clear-history-btn" data-i18n="buttons.clearHistory">기록 삭제</button>
         </section>
 
         <!-- Premium Content Button -->
         <button class="premium-btn" id="premium-btn">
             <span class="premium-icon">✨</span>
-            고급 단위 변환 보기
+            <span data-i18n="buttons.premiumView">고급 단위 변환 보기</span>
         </button>
 
         <!-- Recommendations Section -->
         <div class="recommendations-section">
-            <div class="rec-title">이것도 해보세요</div>
+            <div class="rec-title" data-i18n="sections.recommendations">이것도 해보세요</div>
             <div class="rec-grid">
                 <a href="https://dopabrain.com/shopping-calc/" class="rec-card" target="_blank">
                     <span class="rec-icon">🛍️</span>
                     <span class="rec-info">
-                        <span class="rec-name">글로벌 쇼핑 계산기</span>
-                        <span class="rec-desc">환율, 관세, 팁 한번에!</span>
+                        <span class="rec-name" data-i18n="recommendations.shopping.name">글로벌 쇼핑 계산기</span>
+                        <span class="rec-desc" data-i18n="recommendations.shopping.desc">환율, 관세, 팁 한번에!</span>
                     </span>
                 </a>
                 <a href="https://dopabrain.com/tax-refund-preview/" class="rec-card" target="_blank">
                     <span class="rec-icon">💰</span>
                     <span class="rec-info">
-                        <span class="rec-name">연말정산 미리보기</span>
-                        <span class="rec-desc">환급액 시뮬레이션!</span>
+                        <span class="rec-name" data-i18n="recommendations.taxrefund.name">연말정산 미리보기</span>
+                        <span class="rec-desc" data-i18n="recommendations.taxrefund.desc">환급액 시뮬레이션!</span>
                     </span>
                 </a>
                 <a href="https://dopabrain.com/dday-counter/" class="rec-card" target="_blank">
                     <span class="rec-icon">📅</span>
                     <span class="rec-info">
-                        <span class="rec-name">D-Day 카운터</span>
-                        <span class="rec-desc">중요한 날까지 카운트다운!</span>
+                        <span class="rec-name" data-i18n="recommendations.dday.name">D-Day 카운터</span>
+                        <span class="rec-desc" data-i18n="recommendations.dday.desc">중요한 날까지 카운트다운!</span>
                     </span>
                 </a>
                 <a href="https://dopabrain.com/lottery/" class="rec-card" target="_blank">
                     <span class="rec-icon">🎰</span>
                     <span class="rec-info">
-                        <span class="rec-name">복권 번호 생성기</span>
-                        <span class="rec-desc">행운의 번호를 뽑아보세요!</span>
+                        <span class="rec-name" data-i18n="recommendations.lottery.name">복권 번호 생성기</span>
+                        <span class="rec-desc" data-i18n="recommendations.lottery.desc">행운의 번호를 뽑아보세요!</span>
                     </span>
                 </a>
             </div>
@@ -311,12 +335,13 @@
     <div class="premium-modal" id="premium-modal" style="display: none;">
         <div class="premium-modal-content">
             <button class="premium-close-btn" id="premium-close-btn">✕</button>
-            <h2>고급 단위 변환</h2>
+            <h2 data-i18n="sections.premiumTitle">고급 단위 변환</h2>
             <div id="premium-content"></div>
         </div>
     </div>
 
     <script src="js/conversion-data.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
     <script>
         if ('serviceWorker' in navigator) {

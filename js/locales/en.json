@@ -1,0 +1,88 @@
+{
+  "app": {
+    "title": "Unit Converter Pro - Area·Temperature·Weight Conversion | 40+ Units Supported",
+    "description": "Real-time conversion of 40+ units across 6 categories including area calculation, temperature conversion, weight conversion, and more! Supports Korean traditional units (pyeong, don, nyang, doe). Includes history and favorites features."
+  },
+  "header": {
+    "title": "Unit Converter Pro",
+    "subtitle": "Real-time Unit Conversion"
+  },
+  "categories": {
+    "length": "Length",
+    "weight": "Weight",
+    "temperature": "Temperature",
+    "volume": "Volume",
+    "area": "Area",
+    "speed": "Speed"
+  },
+  "units": {
+    "length": {
+      "pyeong": "Pyeong (pyeong)",
+      "meter": "Square Meters (㎡)",
+      "km": "Kilometers (km)",
+      "m": "Meters (m)"
+    },
+    "weight": {
+      "kg": "Kilograms (kg)",
+      "lb": "Pounds (lb)",
+      "don": "Don (don - traditional)",
+      "nyang": "Nyang (nyang - traditional)"
+    },
+    "temperature": {
+      "celsius": "Celsius (℃)",
+      "fahrenheit": "Fahrenheit (℉)",
+      "kelvin": "Kelvin (K)"
+    },
+    "volume": {
+      "liter": "Liters (L)",
+      "gallon": "Gallons (gal)",
+      "doe": "Doe (doe - traditional)",
+      "hop": "Hop (hop - traditional)"
+    },
+    "area": {
+      "square_meter": "Square Meters (㎡)",
+      "pyeong": "Pyeong (pyeong)",
+      "acre": "Acres (acre)"
+    },
+    "speed": {
+      "kmh": "Kilometers per Hour (km/h)",
+      "mph": "Miles per Hour (mph)",
+      "ms": "Meters per Second (m/s)"
+    }
+  },
+  "buttons": {
+    "swap": "⇄",
+    "or": "or",
+    "addFavorite": "⭐ Save Current Unit",
+    "clearHistory": "Clear History",
+    "premiumView": "View Advanced Conversions",
+    "close": "✕"
+  },
+  "sections": {
+    "favorites": "Favorites",
+    "history": "Recent Conversions",
+    "premiumTitle": "Advanced Unit Conversion",
+    "recommendations": "Try These Too"
+  },
+  "recommendations": {
+    "shopping": {
+      "name": "Global Shopping Calculator",
+      "desc": "Exchange rates, taxes, tips all at once!"
+    },
+    "taxrefund": {
+      "name": "Tax Refund Preview",
+      "desc": "Calculate your refund amount!"
+    },
+    "dday": {
+      "name": "D-Day Counter",
+      "desc": "Countdown to important dates!"
+    },
+    "lottery": {
+      "name": "Lottery Number Generator",
+      "desc": "Draw your lucky numbers!"
+    }
+  },
+  "language": {
+    "select": "Select Language"
+  }
+}
