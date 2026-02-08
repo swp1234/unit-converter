@@ -2,14 +2,11 @@
 
 const CONVERSIONS = {
     length: {
-        // Primary: pyeong (평) <-> sqm (㎡)
+        // Primary: m <-> km
         main: {
-            pyeong: { to: 'sqm', factor: 3.305785 },
-            sqm: { to: 'pyeong', factor: 0.302506 }
-        },
-        // Additional units
-        km: { to: 'sqm', factor: null, custom: true },
-        m: { to: 'sqm', factor: 1, custom: true }
+            m: { to: 'km', factor: 0.001 },
+            km: { to: 'm', factor: 1000 }
+        }
     },
 
     weight: {
