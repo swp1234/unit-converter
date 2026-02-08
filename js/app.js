@@ -379,8 +379,8 @@ class UnitConverterApp {
     // Ad Management
     triggerAdIfNeeded() {
         this.adIntervalCounter++;
-        // Show interstitial ad every 10 conversions
-        if (this.adIntervalCounter >= 10) {
+        // Show interstitial ad every 15 conversions
+        if (this.adIntervalCounter >= 15) {
             this.adIntervalCounter = 0;
             this.showAdModal();
         }
