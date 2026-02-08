@@ -62,7 +62,8 @@
     "favorites": "Избранное",
     "history": "Недавние преобразования",
     "premiumTitle": "Расширенное преобразование единиц",
-    "recommendations": "Попробуйте и эти"
+    "recommendations": "Попробуйте и эти",
+    "quickPresets": "Часто используемые преобразования"
   },
   "recommendations": {
     "shopping": {

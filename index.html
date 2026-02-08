@@ -58,11 +58,18 @@
     <div class="language-selector">
         <button class="lang-btn" id="lang-toggle" title="Select Language">🌐</button>
         <div class="lang-menu hidden" id="lang-menu">
-            <button class="lang-option" data-lang="ko">한국어</button>
-            <button class="lang-option" data-lang="en">English</button>
-            <button class="lang-option" data-lang="zh">简体中文</button>
-            <button class="lang-option" data-lang="hi">हिन्दी</button>
-            <button class="lang-option" data-lang="ru">Русский</button>
+            <button class="lang-option" data-lang="ko">🇰🇷 한국어</button>
+            <button class="lang-option" data-lang="en">🇺🇸 English</button>
+            <button class="lang-option" data-lang="ja">🇯🇵 日本語</button>
+            <button class="lang-option" data-lang="es">🇪🇸 Español</button>
+            <button class="lang-option" data-lang="pt">🇧🇷 Português</button>
+            <button class="lang-option" data-lang="zh">🇨🇳 简体中文</button>
+            <button class="lang-option" data-lang="id">🇮🇩 Bahasa Indonesia</button>
+            <button class="lang-option" data-lang="tr">🇹🇷 Türkçe</button>
+            <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+            <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+            <button class="lang-option" data-lang="hi">🇮🇳 हिन्दी</button>
+            <button class="lang-option" data-lang="ru">🇷🇺 Русский</button>
         </div>
     </div>
 
@@ -88,6 +95,19 @@
             <button class="tab-btn" data-category="speed" data-i18n="categories.speed">속도</button>
         </div>
 
+        <!-- 빠른 변환 프리셋 -->
+        <div class="quick-presets">
+            <h3 class="presets-title" data-i18n="sections.quickPresets">자주 쓰는 변환</h3>
+            <div class="preset-chips" id="preset-chips">
+                <button class="preset-chip" data-from="pyeong" data-to="sqm" data-category="area" data-value="33">33평 → ㎡</button>
+                <button class="preset-chip" data-from="c" data-to="f" data-category="temperature" data-value="36.5">체온 ℃→℉</button>
+                <button class="preset-chip" data-from="kg" data-to="lb" data-category="weight" data-value="70">70kg → lb</button>
+                <button class="preset-chip" data-from="km" data-to="m" data-category="length" data-value="1">1km → m</button>
+                <button class="preset-chip" data-from="l" data-to="gal" data-category="volume" data-value="1">1L → gal</button>
+                <button class="preset-chip" data-from="kmh" data-to="mph" data-category="speed" data-value="100">100km/h → mph</button>
+            </div>
+        </div>
+
         <!-- Conversion Container -->
         <main class="converter-main">
             <!-- Length Tab -->
@@ -111,7 +131,7 @@
                         <input type="number" class="unit-input length-variant" data-unit="km" placeholder="0" step="0.01">
                         <span class="unit-label">km</span>
                     </div>
-                    <div class="separator-text">또는</div>
+                    <div class="separator-text" data-i18n="buttons.or">또는</div>
                     <div class="input-group">
                         <label>미터 (m)</label>
                         <input type="number" class="unit-input length-variant" data-unit="m" placeholder="0" step="0.01">
@@ -141,7 +161,7 @@
                         <input type="number" class="unit-input weight-variant" data-unit="don" placeholder="0" step="0.1">
                         <span class="unit-label">돈</span>
                     </div>
-                    <div class="separator-text">또는</div>
+                    <div class="separator-text" data-i18n="buttons.or">또는</div>
                     <div class="input-group">
                         <label>냥 (nyang - 전통)</label>
                         <input type="number" class="unit-input weight-variant" data-unit="nyang" placeholder="0" step="0.01">
@@ -195,7 +215,7 @@
                         <input type="number" class="unit-input volume-variant" data-unit="doe" placeholder="0" step="0.1">
                         <span class="unit-label">되</span>
                     </div>
-                    <div class="separator-text">또는</div>
+                    <div class="separator-text" data-i18n="buttons.or">또는</div>
                     <div class="input-group">
                         <label>홉 (hop - 전통)</label>
                         <input type="number" class="unit-input volume-variant" data-unit="hop" placeholder="0" step="0.01">

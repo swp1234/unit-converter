@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "Convertisseur d'Unités Pro - Conversion de Zone·Température·Poids | 40+ Unités Supportées",
+    "description": "Conversion en temps réel de 40+ unités dans 6 catégories incluant le calcul de surface, la conversion de température, la conversion de poids et plus! Supporte les unités traditionnelles coréennes (pyeong, don, nyang, doe). Inclut les fonctionnalités d'historique et de favoris."
+  },
+  "header": {
+    "title": "Convertisseur d'Unités Pro",
+    "subtitle": "Conversion d'Unités en Temps Réel"
+  },
+  "categories": {
+    "length": "Longueur",
+    "weight": "Poids",
+    "temperature": "Température",
+    "volume": "Volume",
+    "area": "Superficie",
+    "speed": "Vitesse"
+  },
+  "units": {
+    "length": {
+      "pyeong": "Pyeong (pyeong)",
+      "meter": "Mètres Carrés (㎡)",
+      "km": "Kilomètres (km)",
+      "m": "Mètres (m)"
+    },
+    "weight": {
+      "kg": "Kilogrammes (kg)",
+      "lb": "Livres (lb)",
+      "don": "Don (don - traditionnel)",
+      "nyang": "Nyang (nyang - traditionnel)"
+    },
+    "temperature": {
+      "celsius": "Celsius (℃)",
+      "fahrenheit": "Fahrenheit (℉)",
+      "kelvin": "Kelvin (K)"
+    },
+    "volume": {
+      "liter": "Litres (L)",
+      "gallon": "Gallons (gal)",
+      "doe": "Doe (doe - traditionnel)",
+      "hop": "Hop (hop - traditionnel)"
+    },
+    "area": {
+      "square_meter": "Mètres Carrés (㎡)",
+      "pyeong": "Pyeong (pyeong)",
+      "acre": "Acres (acre)"
+    },
+    "speed": {
+      "kmh": "Kilomètres par Heure (km/h)",
+      "mph": "Miles par Heure (mph)",
+      "ms": "Mètres par Seconde (m/s)"
+    }
+  },
+  "buttons": {
+    "swap": "⇄",
+    "or": "ou",
+    "addFavorite": "⭐ Enregistrer l'Unité Actuelle",
+    "clearHistory": "Effacer l'Historique",
+    "premiumView": "Voir les Conversions Avancées",
+    "close": "✕"
+  },
+  "sections": {
+    "favorites": "Favoris",
+    "history": "Conversions Récentes",
+    "premiumTitle": "Conversion d'Unité Avancée",
+    "recommendations": "Essaie aussi",
+    "quickPresets": "Conversions Fréquemment Utilisées"
+  },
+  "recommendations": {
+    "shopping": {
+      "name": "Calculatrice de Shopping Global",
+      "desc": "Taux de change, taxes, pourboires tous en un!"
+    },
+    "taxrefund": {
+      "name": "Aperçu du Remboursement d'Impôts",
+      "desc": "Calcule ton montant de remboursement!"
+    },
+    "dday": {
+      "name": "Compteur D-Day",
+      "desc": "Compte à rebours jusqu'aux dates importantes!"
+    },
+    "lottery": {
+      "name": "Générateur de Numéros de Loterie",
+      "desc": "Tire tes numéros chanceux!"
+    }
+  },
+  "language": {
+    "select": "Sélectionner la Langue"
+  }
+}

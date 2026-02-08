@@ -62,7 +62,8 @@
     "favorites": "收藏夹",
     "history": "最近转换",
     "premiumTitle": "高级单位转换",
-    "recommendations": "也试试这些"
+    "recommendations": "也试试这些",
+    "quickPresets": "常用转换"
   },
   "recommendations": {
     "shopping": {

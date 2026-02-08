@@ -62,7 +62,8 @@
     "favorites": "Favorites",
     "history": "Recent Conversions",
     "premiumTitle": "Advanced Unit Conversion",
-    "recommendations": "Try These Too"
+    "recommendations": "Try These Too",
+    "quickPresets": "Frequently Used Conversions"
   },
   "recommendations": {
     "shopping": {

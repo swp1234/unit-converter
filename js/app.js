@@ -13,6 +13,7 @@ class UnitConverterApp {
         this.loadFromStorage();
         this.setupEventListeners();
         this.setupSwapButtons();
+        this.setupPresetChips();
         this.renderFavorites();
         this.renderHistory();
         this.renderPremiumContent();
@@ -86,6 +87,41 @@ class UnitConverterApp {
                     // Trigger conversion
                     input1.dispatchEvent(new Event('input'));
                 }
+            });
+        });
+    }
+
+    // 빠른 변환 프리셋
+    setupPresetChips() {
+        document.querySelectorAll('.preset-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const from = chip.dataset.from;
+                const to = chip.dataset.to;
+                const category = chip.dataset.category;
+                const value = chip.dataset.value;
+
+                // 해당 카테고리로 이동
+                this.switchCategory(category);
+
+                // 결과 계산
+                const result = convert(value, from, to, category);
+
+                // 칩에 결과 표시
+                document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+
+                // 해당 카테고리의 첫 번째 입력에 값 설정
+                const content = document.getElementById(`${category}-content`);
+                if (content) {
+                    const inputs = content.querySelectorAll('.unit-input');
+                    if (inputs.length >= 2) {
+                        inputs[0].value = value;
+                        inputs[1].value = result;
+                    }
+                }
+
+                // 히스토리에 추가
+                this.addToHistory(value, from, result, to);
             });
         });
     }

@@ -682,6 +682,61 @@ body {
     }
 }
 
+/* 빠른 변환 프리셋 */
+.quick-presets {
+    margin-bottom: 16px;
+    padding: 16px;
+    background: var(--bg-surface);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.presets-title {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.preset-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.preset-chip {
+    padding: 8px 14px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.preset-chip:hover {
+    background: rgba(46, 213, 115, 0.15);
+    border-color: var(--primary);
+    color: var(--primary-light);
+    transform: translateY(-1px);
+}
+
+.preset-chip:active {
+    transform: translateY(0);
+}
+
+.preset-chip.active {
+    background: rgba(46, 213, 115, 0.2);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
 /* Recommendations Section */
 .recommendations-section { margin: 24px 0 0; padding: 0 16px; }
 .rec-title { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.5); margin-bottom: 12px; text-align: center; letter-spacing: 0.5px; }

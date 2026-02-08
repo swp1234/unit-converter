@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "Unit Converter Pro - Conversión de Área·Temperatura·Peso | 40+ Unidades Compatibles",
+    "description": "Conversión en tiempo real de 40+ unidades en 6 categorías incluyendo cálculo de área, conversión de temperatura, conversión de peso y más. Soporta unidades tradicionales coreanas (pyeong, don, nyang, doe). Incluye características de historial y favoritos."
+  },
+  "header": {
+    "title": "Unit Converter Pro",
+    "subtitle": "Conversión de Unidades en Tiempo Real"
+  },
+  "categories": {
+    "length": "Longitud",
+    "weight": "Peso",
+    "temperature": "Temperatura",
+    "volume": "Volumen",
+    "area": "Área",
+    "speed": "Velocidad"
+  },
+  "units": {
+    "length": {
+      "pyeong": "Pyeong (pyeong)",
+      "meter": "Metros Cuadrados (㎡)",
+      "km": "Kilómetros (km)",
+      "m": "Metros (m)"
+    },
+    "weight": {
+      "kg": "Kilogramos (kg)",
+      "lb": "Libras (lb)",
+      "don": "Don (don - tradicional)",
+      "nyang": "Nyang (nyang - tradicional)"
+    },
+    "temperature": {
+      "celsius": "Celsius (℃)",
+      "fahrenheit": "Fahrenheit (℉)",
+      "kelvin": "Kelvin (K)"
+    },
+    "volume": {
+      "liter": "Litros (L)",
+      "gallon": "Galones (gal)",
+      "doe": "Doe (doe - tradicional)",
+      "hop": "Hop (hop - tradicional)"
+    },
+    "area": {
+      "square_meter": "Metros Cuadrados (㎡)",
+      "pyeong": "Pyeong (pyeong)",
+      "acre": "Acres (acre)"
+    },
+    "speed": {
+      "kmh": "Kilómetros por Hora (km/h)",
+      "mph": "Millas por Hora (mph)",
+      "ms": "Metros por Segundo (m/s)"
+    }
+  },
+  "buttons": {
+    "swap": "⇄",
+    "or": "o",
+    "addFavorite": "⭐ Guardar Unidad Actual",
+    "clearHistory": "Limpiar Historial",
+    "premiumView": "Ver Conversiones Avanzadas",
+    "close": "✕"
+  },
+  "sections": {
+    "favorites": "Favoritos",
+    "history": "Conversiones Recientes",
+    "premiumTitle": "Conversión de Unidades Avanzada",
+    "recommendations": "Prueba Estos También",
+    "quickPresets": "Conversiones Usadas Frecuentemente"
+  },
+  "recommendations": {
+    "shopping": {
+      "name": "Calculadora de Compras Global",
+      "desc": "¡Tasas de cambio, impuestos, propinas todo de una vez!"
+    },
+    "taxrefund": {
+      "name": "Vista Previa de Reembolso de Impuestos",
+      "desc": "¡Calcula tu monto de reembolso!"
+    },
+    "dday": {
+      "name": "Contador D-Day",
+      "desc": "¡Cuenta regresiva a fechas importantes!"
+    },
+    "lottery": {
+      "name": "Generador de Números de Lotería",
+      "desc": "¡Saca tus números de suerte!"
+    }
+  },
+  "language": {
+    "select": "Seleccionar Idioma"
+  }
+}

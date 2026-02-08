@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "ユニットコンバーター Pro - 面積・温度・重量変換 | 40以上のユニットに対応",
+    "description": "面積計算、温度変換、重量変換など6カテゴリーの40以上のユニットをリアルタイム変換！坪、トン、両、升などの韓国伝統単位に対応。履歴とお気に入り機能付き。"
+  },
+  "header": {
+    "title": "ユニットコンバーター Pro",
+    "subtitle": "リアルタイムユニット変換"
+  },
+  "categories": {
+    "length": "長さ",
+    "weight": "重量",
+    "temperature": "温度",
+    "volume": "体積",
+    "area": "面積",
+    "speed": "速度"
+  },
+  "units": {
+    "length": {
+      "pyeong": "坪（坪）",
+      "meter": "平方メートル（㎡）",
+      "km": "キロメートル（km）",
+      "m": "メートル（m）"
+    },
+    "weight": {
+      "kg": "キログラム（kg）",
+      "lb": "ポンド（lb）",
+      "don": "トン（トン-伝統）",
+      "nyang": "両（両-伝統）"
+    },
+    "temperature": {
+      "celsius": "摂氏温度（℃）",
+      "fahrenheit": "華氏温度（℉）",
+      "kelvin": "ケルビン（K）"
+    },
+    "volume": {
+      "liter": "リットル（L）",
+      "gallon": "ガロン（gal）",
+      "doe": "升（升-伝統）",
+      "hop": "合（合-伝統）"
+    },
+    "area": {
+      "square_meter": "平方メートル（㎡）",
+      "pyeong": "坪（坪）",
+      "acre": "エーカー（acre）"
+    },
+    "speed": {
+      "kmh": "時速キロメートル（km/h）",
+      "mph": "マイル毎時（mph）",
+      "ms": "秒速メートル（m/s）"
+    }
+  },
+  "buttons": {
+    "swap": "⇄",
+    "or": "または",
+    "addFavorite": "⭐ 現在のユニットを保存",
+    "clearHistory": "履歴をクリア",
+    "premiumView": "高度な変換を表示",
+    "close": "✕"
+  },
+  "sections": {
+    "favorites": "お気に入り",
+    "history": "最近の変換",
+    "premiumTitle": "高度なユニット変換",
+    "recommendations": "こちらも試してみてください",
+    "quickPresets": "よく使う変換"
+  },
+  "recommendations": {
+    "shopping": {
+      "name": "グローバルショッピング計算機",
+      "desc": "為替、税金、チップをすべて一緒に！"
+    },
+    "taxrefund": {
+      "name": "税務還付プレビュー",
+      "desc": "還付額を計算してください！"
+    },
+    "dday": {
+      "name": "D-Dayカウンター",
+      "desc": "重要な日付までのカウントダウン！"
+    },
+    "lottery": {
+      "name": "ロト番号生成器",
+      "desc": "ラッキーナンバーを引いてください！"
+    }
+  },
+  "language": {
+    "select": "言語を選択"
+  }
+}

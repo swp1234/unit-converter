@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "Unit Converter Pro - Konversi Area·Suhu·Berat | 40+ Unit Didukung",
+    "description": "Konversi real-time 40+ unit di 6 kategori termasuk perhitungan area, konversi suhu, konversi berat, dan lainnya! Mendukung unit tradisional Korea (pyeong, don, nyang, doe). Mencakup fitur riwayat dan favorit."
+  },
+  "header": {
+    "title": "Unit Converter Pro",
+    "subtitle": "Konversi Unit Real-time"
+  },
+  "categories": {
+    "length": "Panjang",
+    "weight": "Berat",
+    "temperature": "Suhu",
+    "volume": "Volume",
+    "area": "Area",
+    "speed": "Kecepatan"
+  },
+  "units": {
+    "length": {
+      "pyeong": "Pyeong (pyeong)",
+      "meter": "Meter Persegi (㎡)",
+      "km": "Kilometer (km)",
+      "m": "Meter (m)"
+    },
+    "weight": {
+      "kg": "Kilogram (kg)",
+      "lb": "Pound (lb)",
+      "don": "Don (don - tradisional)",
+      "nyang": "Nyang (nyang - tradisional)"
+    },
+    "temperature": {
+      "celsius": "Celsius (℃)",
+      "fahrenheit": "Fahrenheit (℉)",
+      "kelvin": "Kelvin (K)"
+    },
+    "volume": {
+      "liter": "Liter (L)",
+      "gallon": "Galon (gal)",
+      "doe": "Doe (doe - tradisional)",
+      "hop": "Hop (hop - tradisional)"
+    },
+    "area": {
+      "square_meter": "Meter Persegi (㎡)",
+      "pyeong": "Pyeong (pyeong)",
+      "acre": "Acre (acre)"
+    },
+    "speed": {
+      "kmh": "Kilometer per Jam (km/h)",
+      "mph": "Mil per Jam (mph)",
+      "ms": "Meter per Detik (m/s)"
+    }
+  },
+  "buttons": {
+    "swap": "⇄",
+    "or": "atau",
+    "addFavorite": "⭐ Simpan Unit Saat Ini",
+    "clearHistory": "Hapus Riwayat",
+    "premiumView": "Lihat Konversi Tingkat Lanjut",
+    "close": "✕"
+  },
+  "sections": {
+    "favorites": "Favorit",
+    "history": "Konversi Terbaru",
+    "premiumTitle": "Konversi Unit Tingkat Lanjut",
+    "recommendations": "Coba Juga",
+    "quickPresets": "Konversi yang Sering Digunakan"
+  },
+  "recommendations": {
+    "shopping": {
+      "name": "Kalkulator Belanja Global",
+      "desc": "Nilai tukar, pajak, tip semuanya sekaligus!"
+    },
+    "taxrefund": {
+      "name": "Pratinjau Pengembalian Pajak",
+      "desc": "Hitung jumlah pengembalian Anda!"
+    },
+    "dday": {
+      "name": "Penghitung D-Day",
+      "desc": "Hitung mundur ke tanggal penting!"
+    },
+    "lottery": {
+      "name": "Generator Nomor Lotre",
+      "desc": "Tarik nomor keberuntungan Anda!"
+    }
+  },
+  "language": {
+    "select": "Pilih Bahasa"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "Birim Dönüştürücü Pro - Alan·Sıcaklık·Ağırlık Dönüşümü | 40+ Birim Destekleniyor",
+    "description": "Alan hesaplama, sıcaklık dönüşümü, ağırlık dönüşümü ve daha fazlası dahil 6 kategoride 40+ birimin gerçek zamanlı dönüşümü! Türk geleneksel birimleri destekler (pyeong, don, nyang, doe). Geçmiş ve favoriler özellikleri dahil."
+  },
+  "header": {
+    "title": "Birim Dönüştürücü Pro",
+    "subtitle": "Gerçek Zamanlı Birim Dönüşümü"
+  },
+  "categories": {
+    "length": "Uzunluk",
+    "weight": "Ağırlık",
+    "temperature": "Sıcaklık",
+    "volume": "Hacim",
+    "area": "Alan",
+    "speed": "Hız"
+  },
+  "units": {
+    "length": {
+      "pyeong": "Pyeong (pyeong)",
+      "meter": "Metrekare (㎡)",
+      "km": "Kilometre (km)",
+      "m": "Metre (m)"
+    },
+    "weight": {
+      "kg": "Kilogram (kg)",
+      "lb": "Libre (lb)",
+      "don": "Don (don - geleneksel)",
+      "nyang": "Nyang (nyang - geleneksel)"
+    },
+    "temperature": {
+      "celsius": "Santigrat (℃)",
+      "fahrenheit": "Fahrenheit (℉)",
+      "kelvin": "Kelvin (K)"
+    },
+    "volume": {
+      "liter": "Litre (L)",
+      "gallon": "Galon (gal)",
+      "doe": "Doe (doe - geleneksel)",
+      "hop": "Hop (hop - geleneksel)"
+    },
+    "area": {
+      "square_meter": "Metrekare (㎡)",
+      "pyeong": "Pyeong (pyeong)",
+      "acre": "Dönüm (acre)"
+    },
+    "speed": {
+      "kmh": "Kilometre/Saat (km/h)",
+      "mph": "Mil/Saat (mph)",
+      "ms": "Metre/Saniye (m/s)"
+    }
+  },
+  "buttons": {
+    "swap": "⇄",
+    "or": "veya",
+    "addFavorite": "⭐ Mevcut Birimi Kaydet",
+    "clearHistory": "Geçmişi Temizle",
+    "premiumView": "Gelişmiş Dönüşümleri Görüntüle",
+    "close": "✕"
+  },
+  "sections": {
+    "favorites": "Favoriler",
+    "history": "Son Dönüşümler",
+    "premiumTitle": "Gelişmiş Birim Dönüşümü",
+    "recommendations": "Bunları da Dene",
+    "quickPresets": "Sık Kullanılan Dönüştürmeler"
+  },
+  "recommendations": {
+    "shopping": {
+      "name": "Küresel Alışveriş Hesaplayıcısı",
+      "desc": "Döviz kurları, vergiler, bahşişler hepsi bir yerde!"
+    },
+    "taxrefund": {
+      "name": "Vergi İadesi Önizlemesi",
+      "desc": "İade tutarını hesapla!"
+    },
+    "dday": {
+      "name": "D-Day Sayacı",
+      "desc": "Önemli tarihlere geri sayım!"
+    },
+    "lottery": {
+      "name": "Şans Numarası Üreteci",
+      "desc": "Şanslı numaralarını çek!"
+    }
+  },
+  "language": {
+    "select": "Dil Seç"
+  }
+}
