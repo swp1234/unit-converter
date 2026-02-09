@@ -6,9 +6,9 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3600813755953882" crossorigin="anonymous"></script>
     <meta name="robots" content="max-image-preview:large">
     <meta name="theme-color" content="#2ed573">
-    <meta name="description" content="평수 계산, 온도 변환, 무게 변환 등 6개 카테고리 40+ 단위를 실시간 변환! 한국 전통 단위(평, 돈, 냥, 되) 지원. 히스토리, 즐겨찾기 기능 포함.">
-    <meta name="keywords" content="단위 변환기, 평수 계산, 제곱미터 변환, 온도 변환, 무게 변환, 길이 변환, 평 계산기, 한국 전통 단위">
-    <title>단위 변환기 Pro - 평수·온도·무게 변환 | 40+ 단위 지원</title>
+    <meta name="description" content="평수 계산, 온도 변환, 무게 변환 등 6개 카테고리 40+ 단위를 실시간 변환! ⇄ 한국 전통 단위(평, 돈, 냥, 되) 지원. 히스토리, 즐겨찾기 기능!">
+    <meta name="keywords" content="단위 변환기, 평수 계산, 제곱미터 변환, 온도 변환, 무게 변환, 길이 변환, 평 계산기, 한국 전통 단위, 국제 단위 변환">
+    <title>단위 변환기 Pro ⇄ - 평수·온도·무게 변환 | 40+ 단위</title>
     <script src="js/i18n.js"></script>
     <link rel="canonical" href="https://dopabrain.com/unit-converter/">
     <link rel="manifest" href="manifest.json">
@@ -27,16 +27,22 @@
         .lang-option.active { background: rgba(59,130,246,0.3); font-weight: 600; }
     </style>
     <!-- Open Graph & Social Media Meta Tags -->
-    <meta property="og:title" content="단위 변환기 Pro - 평수·온도·무게 한번에">
-    <meta property="og:description" content="40+ 단위 실시간 변환! 평수 계산, 온도 변환, 한국 전통 단위 지원 ⇄">
+    <meta property="og:title" content="단위 변환기 Pro ⇄ - 평수·온도·무게 한번에">
+    <meta property="og:description" content="40+ 단위 실시간 변환! ⇄ 평수 계산, 온도 변환, 한국 전통 단위 지원. 히스토리 & 즐겨찾기!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dopabrain.com/unit-converter/">
     <meta property="og:image" content="https://dopabrain.com/unit-converter/icon-512.svg">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:type" content="image/svg+xml">
     <meta property="og:locale" content="ko_KR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="단위 변환기 Pro ⇄">
-    <meta name="twitter:description" content="평수·온도·무게 40+ 단위 변환">
+    <meta name="twitter:title" content="단위 변환기 Pro ⇄ - 40+ 단위 변환">
+    <meta name="twitter:description" content="평수·온도·무게 한번에! ⇄ 실시간 단위 변환 도구!">
     <meta name="twitter:image" content="https://dopabrain.com/unit-converter/icon-512.svg">
+    <meta name="twitter:site" content="@dopabrain">
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
@@ -54,6 +60,14 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
 </head>
 <body>
+    <div class="app-loader" id="app-loader">
+        <div class="loader-content">
+            <div class="loader-emoji">🔄</div>
+            <div class="loader-spinner"></div>
+            <div class="loader-text" data-i18n="app.loading">로딩 중...</div>
+        </div>
+    </div>
+
     <!-- Language Selector -->
     <div class="language-selector">
         <button class="lang-btn" id="lang-toggle" title="Select Language">🌐</button>
