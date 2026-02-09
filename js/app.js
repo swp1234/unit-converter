@@ -5,6 +5,7 @@ class UnitConverterApp {
         this.currentCategory = 'length';
         this.favorites = [];
         this.history = [];
+        this.quickConversions = [];
         this.adIntervalCounter = 0;
         this.init();
     }
@@ -16,6 +17,7 @@ class UnitConverterApp {
         this.setupPresetChips();
         this.renderFavorites();
         this.renderHistory();
+        this.renderQuickConversions();
         this.renderPremiumContent();
     }
 
@@ -26,13 +28,15 @@ class UnitConverterApp {
             const data = JSON.parse(stored);
             this.favorites = data.favorites || [];
             this.history = data.history || [];
+            this.quickConversions = data.quickConversions || [];
         }
     }
 
     saveToStorage() {
         localStorage.setItem('unitConverterData', JSON.stringify({
             favorites: this.favorites,
-            history: this.history
+            history: this.history,
+            quickConversions: this.quickConversions
         }));
     }
 
@@ -55,6 +59,11 @@ class UnitConverterApp {
         document.getElementById('clear-history-btn').addEventListener('click', () => this.clearHistory());
         document.getElementById('favorites-toggle').addEventListener('click', () => this.toggleSection('favorites'));
         document.getElementById('history-toggle').addEventListener('click', () => this.toggleSection('history'));
+
+        const quickToggle = document.getElementById('quick-conversions-toggle');
+        if (quickToggle) {
+            quickToggle.addEventListener('click', () => this.toggleSection('quick-conversions'));
+        }
 
         // Premium content
         document.getElementById('premium-btn').addEventListener('click', () => this.showPremiumModal());
