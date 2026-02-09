@@ -1,11 +1,11 @@
 const CACHE_NAME = 'unit-converter-v1';
 const URLS_TO_CACHE = [
-    './',
-    './index.html',
-    './manifest.json',
-    './css/style.css',
-    './js/app.js',
-    './js/conversion-data.js'
+    '/',
+    '/index.html',
+    '/manifest.json',
+    '/css/style.css',
+    '/js/app.js',
+    '/js/conversion-data.js'
 ];
 
 // Install event
