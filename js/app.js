@@ -264,18 +264,23 @@ class UnitConverterApp {
         this.quickConversions.forEach(conv => {
             const item = document.createElement('div');
             item.className = 'quick-conversion-item';
-            item.innerHTML = `
-                <span>${conv.fromUnit} → ${conv.toUnit}</span>
-                <button class="quick-conversion-copy-btn" data-from="${conv.fromUnit}" data-to="${conv.toUnit}">복사</button>
-            `;
 
-            item.querySelector('.quick-conversion-copy-btn').addEventListener('click', (e) => {
+            const span = document.createElement('span');
+            span.textContent = `${conv.fromUnit} → ${conv.toUnit}`;
+
+            const btn = document.createElement('button');
+            btn.className = 'quick-conversion-copy-btn';
+            btn.textContent = '복사';
+            btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const text = `${conv.fromUnit} → ${conv.toUnit}`;
                 navigator.clipboard.writeText(text).then(() => {
                     this.showToast('복사됨!');
                 });
             });
+
+            item.appendChild(span);
+            item.appendChild(btn);
 
             item.addEventListener('click', () => {
                 this.loadQuickConversion(conv);
@@ -353,16 +358,20 @@ class UnitConverterApp {
             const inputs = fav.inputs;
             const text = inputs.map(inp => `${inp.value || '0'} ${inp.unit}`).join(' = ');
 
-            item.innerHTML = `
-                <span>${text}</span>
-                <button class="favorite-remove-btn" data-id="${fav.id}">삭제</button>
-            `;
+            const span = document.createElement('span');
+            span.textContent = text;
 
-            item.querySelector('.favorite-remove-btn').addEventListener('click', () => {
+            const btn = document.createElement('button');
+            btn.className = 'favorite-remove-btn';
+            btn.textContent = '삭제';
+            btn.addEventListener('click', () => {
                 this.favorites = this.favorites.filter(f => f.id !== fav.id);
                 this.saveToStorage();
                 this.renderFavorites();
             });
+
+            item.appendChild(span);
+            item.appendChild(btn);
 
             list.appendChild(item);
         });
@@ -381,19 +390,29 @@ class UnitConverterApp {
             const item = document.createElement('div');
             item.className = 'history-item';
 
-            item.innerHTML = `
-                <div>
-                    <span>${entry.fromValue} ${entry.fromUnit} = ${entry.toValue} ${entry.toUnit}</span>
-                    <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px;">${entry.timestamp}</div>
-                </div>
-                <button class="history-remove-btn" data-id="${entry.id}">삭제</button>
-            `;
+            const contentDiv = document.createElement('div');
+            const span = document.createElement('span');
+            span.textContent = `${entry.fromValue} ${entry.fromUnit} = ${entry.toValue} ${entry.toUnit}`;
+            const timeDiv = document.createElement('div');
+            timeDiv.style.fontSize = '11px';
+            timeDiv.style.color = 'var(--text-secondary)';
+            timeDiv.style.marginTop = '4px';
+            timeDiv.textContent = entry.timestamp;
 
-            item.querySelector('.history-remove-btn').addEventListener('click', () => {
+            const btn = document.createElement('button');
+            btn.className = 'history-remove-btn';
+            btn.textContent = '삭제';
+            btn.addEventListener('click', () => {
                 this.history = this.history.filter(h => h.id !== entry.id);
                 this.saveToStorage();
                 this.renderHistory();
             });
+
+            contentDiv.appendChild(span);
+            contentDiv.appendChild(timeDiv);
+
+            item.appendChild(contentDiv);
+            item.appendChild(btn);
 
             list.appendChild(item);
         });
@@ -459,12 +478,18 @@ class UnitConverterApp {
                 `${item.fromLabel} ↔ ${item.toLabel} (공식 기반)` :
                 `${item.fromLabel} ↔ ${item.toLabel} (${item.factor})`;
 
-            div.innerHTML = `
-                <strong>${text}</strong>
-                <p style="margin-top: 8px; color: var(--text-secondary); font-size: 12px;">
-                    예: 1 ${item.from} = ${item.formula ? item.formula(1).toFixed(4) : (item.factor).toFixed(4)} ${item.to}
-                </p>
-            `;
+            const strong = document.createElement('strong');
+            strong.textContent = text;
+
+            const p = document.createElement('p');
+            p.style.marginTop = '8px';
+            p.style.color = 'var(--text-secondary)';
+            p.style.fontSize = '12px';
+            const exampleValue = item.formula ? item.formula(1).toFixed(4) : (item.factor).toFixed(4);
+            p.textContent = `예: 1 ${item.from} = ${exampleValue} ${item.to}`;
+
+            div.appendChild(strong);
+            div.appendChild(p);
 
             container.appendChild(div);
         });
