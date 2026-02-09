@@ -285,139 +285,49 @@
                     </div>
                 </div>
             </div>
-        </main>
-
-        <!-- Quick Conversions (Recent) -->
-        <section class="quick-conversions-section" id="quickConversionsSection" style="display:none;">
-            <div class="section-header">
-                <h2 data-i18n="sections.quickRecent">최근 5개 변환</h2>
-                <button class="toggle-btn" id="quick-conversions-toggle">▼</button>
-            </div>
-            <div class="quick-conversions-list" id="quickConversionsList"></div>
-        </section>
-
-        <!-- Favorites & History Section -->
-        <section class="favorites-section">
-            <div class="section-header">
-                <h2 data-i18n="sections.favorites">즐겨찾기</h2>
-                <button class="toggle-btn" id="favorites-toggle">▼</button>
-            </div>
-            <div class="favorites-list" id="favorites-list"></div>
-            <button class="add-favorite-btn" id="add-favorite-btn" data-i18n="buttons.addFavorite">⭐ 현재 단위 저장</button>
-        </section>
-
-        <!-- Recent Conversions -->
-        <section class="history-section">
-            <div class="section-header">
-                <h2 data-i18n="sections.history">최근 변환</h2>
-                <button class="toggle-btn" id="history-toggle">▼</button>
-            </div>
-            <div class="history-list" id="history-list"></div>
-            <button class="clear-history-btn" id="clear-history-btn" data-i18n="buttons.clearHistory">기록 삭제</button>
-        </section>
-
-        <!-- Premium Content Button -->
-        <button class="premium-btn" id="premium-btn">
-            <span class="premium-icon">✨</span>
-            <span data-i18n="buttons.premiumView">고급 단위 변환 보기</span>
-        </button>
-
-        <!-- Recommendations Section -->
-        <div class="recommendations-section">
-            <div class="rec-title" data-i18n="sections.recommendations">이것도 해보세요</div>
-            <div class="rec-grid">
-                <a href="https://dopabrain.com/dream-fortune/" class="rec-card" target="_blank">
-                    <span class="rec-icon">🔮</span>
-                    <span class="rec-info">
-                        <span class="rec-name">AI 꿈해몽/운세</span>
-                        <span class="rec-desc">오늘의 운세를 확인하세요!</span>
-                    </span>
-                </a>
-                <a href="https://dopabrain.com/shopping-calc/" class="rec-card" target="_blank">
-                    <span class="rec-icon">🛍️</span>
-                    <span class="rec-info">
-                        <span class="rec-name" data-i18n="recommendations.shopping.name">글로벌 쇼핑 계산기</span>
-                        <span class="rec-desc" data-i18n="recommendations.shopping.desc">환율, 관세, 팁 한번에!</span>
-                    </span>
-                </a>
-                <a href="https://dopabrain.com/tax-refund-preview/" class="rec-card" target="_blank">
-                    <span class="rec-icon">💰</span>
-                    <span class="rec-info">
-                        <span class="rec-name" data-i18n="recommendations.taxrefund.name">연말정산 미리보기</span>
-                        <span class="rec-desc" data-i18n="recommendations.taxrefund.desc">환급액 시뮬레이션!</span>
-                    </span>
-                </a>
-                <a href="https://dopabrain.com/dday-counter/" class="rec-card" target="_blank">
-                    <span class="rec-icon">📅</span>
-                    <span class="rec-info">
-                        <span class="rec-name" data-i18n="recommendations.dday.name">D-Day 카운터</span>
-                        <span class="rec-desc" data-i18n="recommendations.dday.desc">중요한 날까지 카운트다운!</span>
-                    </span>
-                </a>
-                <a href="https://dopabrain.com/lottery/" class="rec-card" target="_blank">
-                    <span class="rec-icon">🎰</span>
-                    <span class="rec-info">
-                        <span class="rec-name" data-i18n="recommendations.lottery.name">복권 번호 생성기</span>
-                        <span class="rec-desc" data-i18n="recommendations.lottery.desc">행운의 번호를 뽑아보세요!</span>
-                    </span>
-                </a>
-                <a href="https://dopabrain.com/quiz-app/" class="rec-card" target="_blank">
-                    <span class="rec-icon">🎯</span>
-                    <span class="rec-info">
-                        <span class="rec-name">퀴즈 앱</span>
-                        <span class="rec-desc">재미있는 퀴즈로 뇌운동!</span>
-                    </span>
-                </a>
-                <a href="https://dopabrain.com/detox-timer/" class="rec-card" target="_blank">
-                    <span class="rec-icon">⏱️</span>
-                    <span class="rec-info">
-                        <span class="rec-name">디지털 디톡스 타이머</span>
-                        <span class="rec-desc">휴식 시간을 설정하세요!</span>
-                    </span>
-                </a>
-                <a href="https://dopabrain.com/mbti-tips/" class="rec-card" target="_blank">
-                    <span class="rec-icon">💝</span>
-                    <span class="rec-info">
-                        <span class="rec-name">MBTI 팁</span>
-                        <span class="rec-desc">성격 유형별 팁 알아보기!</span>
-                    </span>
-                </a>
+                    <!-- 크로스 프로모션 추천 섹션 -->
+            <div class="recommendations-section">
+                <div class="rec-title" data-i18n="recommendations.title">이것도 해보세요</div>
+                <div class="rec-grid">
+                    <a href="https://dopabrain.com/shopping-calc/" class="rec-card" target="_blank">
+                        <span class="rec-icon">💱</span>
+                        <span class="rec-info">
+                            <span class="rec-name">환전 계산기</span>
+                        </span>
+                    </a>
+                    <a href="https://dopabrain.com/tax-refund-preview/" class="rec-card" target="_blank">
+                        <span class="rec-icon">📊</span>
+                        <span class="rec-info">
+                            <span class="rec-name">연말정산</span>
+                        </span>
+                    </a>
+                    <a href="https://dopabrain.com/lottery/" class="rec-card" target="_blank">
+                        <span class="rec-icon">🎰</span>
+                        <span class="rec-info">
+                            <span class="rec-name">로또 번호 추천</span>
+                        </span>
+                    </a>
+                    <a href="https://dopabrain.com/dday-counter/" class="rec-card" target="_blank">
+                        <span class="rec-icon">⏳</span>
+                        <span class="rec-info">
+                            <span class="rec-name">디데이 카운터</span>
+                        </span>
+                    </a>
+                    <a href="https://dopabrain.com/quiz-app/" class="rec-card" target="_blank">
+                        <span class="rec-icon">🧠</span>
+                        <span class="rec-info">
+                            <span class="rec-name">상식 퀴즈</span>
+                        </span>
+                    </a>
+                    <a href="https://dopabrain.com/dev-quiz/" class="rec-card" target="_blank">
+                        <span class="rec-icon">💻</span>
+                        <span class="rec-info">
+                            <span class="rec-name">개발자 퀴즈</span>
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Bottom Banner Ad -->
-    <div class="ad-container ad-bottom">
-        <div class="ad-placeholder">광고 영역</div>
-    </div>
-
-    <!-- DopaBrain 홈 링크 -->
-    <footer class="game-footer">
-        <a href="https://dopabrain.com/portal/" class="back-link" data-i18n="game.back">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="m15 18-6-6 6-6"></path></svg>
-            DopaBrain 홈
-        </a>
-    </footer>
-
-    <!-- Interstitial Ad Modal (shown occasionally) -->
-    <div class="ad-modal" id="ad-modal" style="display: none;">
-        <div class="ad-modal-content">
-            <div class="ad-countdown">
-                <span id="ad-countdown-text">광고를 보는 중입니다... <strong id="countdown-num">5</strong>초</span>
-            </div>
-            <div class="ad-placeholder">전면 광고 영역</div>
-            <button class="ad-close-btn" id="ad-close-btn" style="display: none;">닫기</button>
-        </div>
-    </div>
-
-    <!-- Premium Content Modal -->
-    <div class="premium-modal" id="premium-modal" style="display: none;">
-        <div class="premium-modal-content">
-            <button class="premium-close-btn" id="premium-close-btn">✕</button>
-            <h2 data-i18n="sections.premiumTitle">고급 단위 변환</h2>
-            <div id="premium-content"></div>
-        </div>
-    </div>
 
     <script src="js/conversion-data.js"></script>
     <script src="js/i18n.js"></script>
