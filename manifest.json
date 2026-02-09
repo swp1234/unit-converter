@@ -2,27 +2,14 @@
   "name": "단위 변환기 Pro",
   "short_name": "단위 변환기",
   "description": "평수, 무게, 온도, 부피 등 다양한 단위를 실시간으로 변환합니다. 한국 전통 단위도 지원합니다.",
-  "start_url": "/unit-converter/",
-  "scope": "/unit-converter/",
+  "start_url": ".",
   "display": "standalone",
-  "orientation": "portrait-primary",
+  "orientation": "portrait",
   "theme_color": "#2ed573",
   "background_color": "#0f0f0f",
+  "lang": "ko",
+  "dir": "ltr",
   "categories": ["productivity", "utilities"],
-  "screenshots": [
-    {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%232ed573' width='540' height='720'/><text x='270' y='360' font-size='100' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>⇄</text></svg>",
-      "sizes": "540x720",
-      "type": "image/svg+xml",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'><rect fill='%232ed573' width='1280' height='720'/><text x='640' y='360' font-size='100' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>⇄</text></svg>",
-      "sizes": "1280x720",
-      "type": "image/svg+xml",
-      "form_factor": "wide"
-    }
-  ],
   "icons": [
     {
       "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232ed573' width='192' height='192' rx='45'/><text x='96' y='96' font-size='100' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>⇄</text></svg>",
@@ -54,7 +41,7 @@
       "name": "길이 변환",
       "short_name": "길이",
       "description": "평수와 제곱미터 변환",
-      "url": "/unit-converter/?category=length",
+      "url": "index.html?category=length",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232ed573' width='192' height='192'/><text x='96' y='96' font-size='80' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>⬌</text></svg>",
@@ -67,7 +54,7 @@
       "name": "무게 변환",
       "short_name": "무게",
       "description": "킬로그램과 파운드 변환",
-      "url": "/unit-converter/?category=weight",
+      "url": "index.html?category=weight",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232ed573' width='192' height='192'/><text x='96' y='96' font-size='80' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>⚖</text></svg>",
@@ -80,7 +67,7 @@
       "name": "온도 변환",
       "short_name": "온도",
       "description": "섭씨와 화씨 변환",
-      "url": "/unit-converter/?category=temperature",
+      "url": "index.html?category=temperature",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232ed573' width='192' height='192'/><text x='96' y='96' font-size='80' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>🌡</text></svg>",
@@ -89,6 +76,5 @@
         }
       ]
     }
-  ],
-  "prefer_related_applications": false
+  ]
 }
