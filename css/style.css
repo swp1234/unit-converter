@@ -188,7 +188,8 @@ body {
     -webkit-backdrop-filter: blur(10px);
 }
 
-.unit-row:has(.unit-row) {
+/* Nested unit rows fallback - CSS :has() not supported in older browsers */
+.unit-row.nested {
     grid-template-columns: 1fr;
     gap: 12px;
 }
