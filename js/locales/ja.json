@@ -61,6 +61,7 @@
   "sections": {
     "favorites": "お気に入り",
     "history": "最近の変換",
+    "quickRecent": "最近の5つの変換",
     "premiumTitle": "高度なユニット変換",
     "recommendations": "こちらも試してみてください",
     "quickPresets": "よく使う変換"

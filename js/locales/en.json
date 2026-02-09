@@ -61,6 +61,7 @@
   "sections": {
     "favorites": "Favorites",
     "history": "Recent Conversions",
+    "quickRecent": "Recent 5 Conversions",
     "premiumTitle": "Advanced Unit Conversion",
     "recommendations": "Try These Too",
     "quickPresets": "Frequently Used Conversions"

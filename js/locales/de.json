@@ -61,6 +61,7 @@
   "sections": {
     "favorites": "Favoriten",
     "history": "Kürzliche Umrechnungen",
+    "quickRecent": "Letzte 5 Umrechnungen",
     "premiumTitle": "Erweiterte Einheitenumrechnung",
     "recommendations": "Probiere auch diese",
     "quickPresets": "Häufig verwendete Konvertierungen"

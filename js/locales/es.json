@@ -61,6 +61,7 @@
   "sections": {
     "favorites": "Favoritos",
     "history": "Conversiones Recientes",
+    "quickRecent": "Últimas 5 Conversiones",
     "premiumTitle": "Conversión de Unidades Avanzada",
     "recommendations": "Prueba Estos También",
     "quickPresets": "Conversiones Usadas Frecuentemente"

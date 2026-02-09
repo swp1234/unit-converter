@@ -61,6 +61,7 @@
   "sections": {
     "favorites": "Favoriler",
     "history": "Son Dönüşümler",
+    "quickRecent": "Son 5 Dönüşüm",
     "premiumTitle": "Gelişmiş Birim Dönüşümü",
     "recommendations": "Bunları da Dene",
     "quickPresets": "Sık Kullanılan Dönüştürmeler"

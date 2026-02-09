@@ -61,6 +61,7 @@
   "sections": {
     "favorites": "收藏夹",
     "history": "最近转换",
+    "quickRecent": "最近 5 个转换",
     "premiumTitle": "高级单位转换",
     "recommendations": "也试试这些",
     "quickPresets": "常用转换"

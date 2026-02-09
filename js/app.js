@@ -227,8 +227,89 @@ class UnitConverterApp {
 
         this.history.unshift(entry);
         if (this.history.length > 50) this.history.pop();
+
+        // Update quick conversions (top 5)
+        const existing = this.quickConversions.findIndex(
+            q => q.fromUnit === fromUnit && q.toUnit === toUnit
+        );
+        if (existing !== -1) {
+            this.quickConversions.splice(existing, 1);
+        }
+        this.quickConversions.unshift({
+            fromUnit,
+            toUnit,
+            category: this.currentCategory
+        });
+        if (this.quickConversions.length > 5) this.quickConversions.pop();
+
         this.saveToStorage();
         this.renderHistory();
+        this.renderQuickConversions();
+    }
+
+    renderQuickConversions() {
+        const section = document.getElementById('quickConversionsSection');
+        const list = document.getElementById('quickConversionsList');
+
+        if (!list) return;
+
+        if (this.quickConversions.length === 0) {
+            if (section) section.style.display = 'none';
+            return;
+        }
+
+        if (section) section.style.display = 'block';
+        list.innerHTML = '';
+
+        this.quickConversions.forEach(conv => {
+            const item = document.createElement('div');
+            item.className = 'quick-conversion-item';
+            item.innerHTML = `
+                <span>${conv.fromUnit} → ${conv.toUnit}</span>
+                <button class="quick-conversion-copy-btn" data-from="${conv.fromUnit}" data-to="${conv.toUnit}">복사</button>
+            `;
+
+            item.querySelector('.quick-conversion-copy-btn').addEventListener('click', (e) => {
+                e.stopPropagation();
+                const text = `${conv.fromUnit} → ${conv.toUnit}`;
+                navigator.clipboard.writeText(text).then(() => {
+                    this.showToast('복사됨!');
+                });
+            });
+
+            item.addEventListener('click', () => {
+                this.loadQuickConversion(conv);
+            });
+
+            list.appendChild(item);
+        });
+    }
+
+    loadQuickConversion(conv) {
+        this.switchCategory(conv.category);
+        // Find and populate the conversion inputs
+        const content = document.getElementById(`${conv.category}-content`);
+        if (content) {
+            const inputs = content.querySelectorAll('.unit-input');
+            inputs.forEach((input, idx) => {
+                const label = input.closest('.input-group')?.querySelector('.unit-label')?.textContent || '';
+                if (idx === 0 && this.getInputUnit(input, idx) === conv.fromUnit) {
+                    input.value = '1';
+                    input.dispatchEvent(new Event('input'));
+                }
+            });
+        }
+    }
+
+    showToast(message) {
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.remove();
+        }, 2000);
     }
 
     addFavorite() {
@@ -327,12 +408,20 @@ class UnitConverterApp {
     }
 
     toggleSection(section) {
-        const list = section === 'favorites' ?
-            document.getElementById('favorites-list') :
-            document.getElementById('history-list');
-        const btn = section === 'favorites' ?
-            document.getElementById('favorites-toggle') :
-            document.getElementById('history-toggle');
+        let list, btn;
+
+        if (section === 'favorites') {
+            list = document.getElementById('favorites-list');
+            btn = document.getElementById('favorites-toggle');
+        } else if (section === 'history') {
+            list = document.getElementById('history-list');
+            btn = document.getElementById('history-toggle');
+        } else if (section === 'quick-conversions') {
+            list = document.getElementById('quickConversionsList');
+            btn = document.getElementById('quick-conversions-toggle');
+        }
+
+        if (!list || !btn) return;
 
         const isHidden = list.style.display === 'none';
         list.style.display = isHidden ? 'flex' : 'none';
