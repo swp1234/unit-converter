@@ -84,6 +84,19 @@
       "desc": "Tarik nomor keberuntungan Anda!"
     }
   },
+  "messages": {
+    "copy": "Salin",
+    "copied": "Disalin!",
+    "delete": "Hapus",
+    "saved": "Tersimpan!",
+    "enterValue": "Silakan masukkan nilai untuk dikonversi.",
+    "noFavorites": "Tidak ada favorit yang disimpan",
+    "noHistory": "Tidak ada riwayat konversi",
+    "confirmClearHistory": "Hapus semua riwayat?",
+    "noPremium": "Tidak ada opsi konversi lanjutan yang tersedia.",
+    "formulaBased": "berbasis formula",
+    "example": "misalnya"
+  },
   "ads": {
     "banner": "Ruang Iklan"
   },

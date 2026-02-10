@@ -84,6 +84,19 @@
       "desc": "Puxe seus números da sorte!"
     }
   },
+  "messages": {
+    "copy": "Copiar",
+    "copied": "Copiado!",
+    "delete": "Excluir",
+    "saved": "Salvo!",
+    "enterValue": "Por favor, insira um valor para converter.",
+    "noFavorites": "Nenhum favorito salvo",
+    "noHistory": "Nenhum histórico de conversão",
+    "confirmClearHistory": "Excluir todo o histórico?",
+    "noPremium": "Nenhuma opção de conversão avançada disponível.",
+    "formulaBased": "baseado em fórmula",
+    "example": "ex."
+  },
   "ads": {
     "banner": "Espaço de anúncio"
   },

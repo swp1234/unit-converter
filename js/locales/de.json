@@ -84,6 +84,19 @@
       "desc": "Ziehe deine Glückszahlen!"
     }
   },
+  "messages": {
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "delete": "Löschen",
+    "saved": "Gespeichert!",
+    "enterValue": "Bitte geben Sie einen Wert zum Konvertieren ein.",
+    "noFavorites": "Keine gespeicherten Favoriten",
+    "noHistory": "Keine Konvertierungsverlauf",
+    "confirmClearHistory": "Gesamten Verlauf löschen?",
+    "noPremium": "Keine erweiterten Konvertierungsoptionen verfügbar.",
+    "formulaBased": "formelbasiert",
+    "example": "z. B."
+  },
   "ads": {
     "banner": "Anzeigenplatz"
   },

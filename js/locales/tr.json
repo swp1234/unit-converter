@@ -84,6 +84,19 @@
       "desc": "Şanslı numaralarını çek!"
     }
   },
+  "messages": {
+    "copy": "Kopyala",
+    "copied": "Kopyalandı!",
+    "delete": "Sil",
+    "saved": "Kaydedildi!",
+    "enterValue": "Lütfen dönüştürmek için bir değer girin.",
+    "noFavorites": "Kaydedilen favori yok",
+    "noHistory": "Dönüşüm geçmişi yok",
+    "confirmClearHistory": "Tüm geçmişi sil?",
+    "noPremium": "Kullanılabilir gelişmiş dönüşüm seçeneği yok.",
+    "formulaBased": "formül tabanlı",
+    "example": "ör."
+  },
   "ads": {
     "banner": "Reklam Alanı"
   },

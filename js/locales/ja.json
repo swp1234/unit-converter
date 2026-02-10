@@ -84,6 +84,19 @@
       "desc": "ラッキーナンバーを引いてください！"
     }
   },
+  "messages": {
+    "copy": "コピー",
+    "copied": "コピーしました！",
+    "delete": "削除",
+    "saved": "保存しました！",
+    "enterValue": "変換する値を入力してください。",
+    "noFavorites": "保存されたお気に入りがありません",
+    "noHistory": "変換履歴がありません",
+    "confirmClearHistory": "すべての履歴を削除しますか？",
+    "noPremium": "利用可能な高度な変換オプションはありません。",
+    "formulaBased": "数式ベース",
+    "example": "例えば"
+  },
   "ads": {
     "banner": "広告スペース"
   },

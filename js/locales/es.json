@@ -84,6 +84,19 @@
       "desc": "¡Saca tus números de suerte!"
     }
   },
+  "messages": {
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "delete": "Eliminar",
+    "saved": "¡Guardado!",
+    "enterValue": "Por favor, ingresa un valor para convertir.",
+    "noFavorites": "Sin favoritos guardados",
+    "noHistory": "Sin historial de conversión",
+    "confirmClearHistory": "¿Eliminar todo el historial?",
+    "noPremium": "No hay opciones de conversión avanzada disponibles.",
+    "formulaBased": "basado en fórmula",
+    "example": "p. ej."
+  },
   "ads": {
     "banner": "Espacio publicitario"
   },

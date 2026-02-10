@@ -84,6 +84,19 @@
       "desc": "Tire tes numéros chanceux!"
     }
   },
+  "messages": {
+    "copy": "Copier",
+    "copied": "Copié!",
+    "delete": "Supprimer",
+    "saved": "Enregistré!",
+    "enterValue": "Veuillez entrer une valeur à convertir.",
+    "noFavorites": "Pas de favoris enregistrés",
+    "noHistory": "Pas d'historique de conversion",
+    "confirmClearHistory": "Supprimer tout l'historique?",
+    "noPremium": "Aucune option de conversion avancée disponible.",
+    "formulaBased": "basé sur la formule",
+    "example": "p. ex."
+  },
   "ads": {
     "banner": "Espace publicitaire"
   },
