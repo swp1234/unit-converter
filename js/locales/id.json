@@ -84,6 +84,9 @@
       "desc": "Tarik nomor keberuntungan Anda!"
     }
   },
+  "ads": {
+    "banner": "Ruang Iklan"
+  },
   "language": {
     "select": "Pilih Bahasa"
   }

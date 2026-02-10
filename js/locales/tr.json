@@ -84,6 +84,9 @@
       "desc": "Şanslı numaralarını çek!"
     }
   },
+  "ads": {
+    "banner": "Reklam Alanı"
+  },
   "language": {
     "select": "Dil Seç"
   }

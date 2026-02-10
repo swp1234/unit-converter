@@ -84,6 +84,9 @@
       "desc": "Puxe seus números da sorte!"
     }
   },
+  "ads": {
+    "banner": "Espaço de anúncio"
+  },
   "language": {
     "select": "Selecionar Idioma"
   }

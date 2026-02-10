@@ -84,6 +84,9 @@
       "desc": "¡Saca tus números de suerte!"
     }
   },
+  "ads": {
+    "banner": "Espacio publicitario"
+  },
   "language": {
     "select": "Seleccionar Idioma"
   }

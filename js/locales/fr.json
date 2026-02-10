@@ -84,6 +84,9 @@
       "desc": "Tire tes numéros chanceux!"
     }
   },
+  "ads": {
+    "banner": "Espace publicitaire"
+  },
   "language": {
     "select": "Sélectionner la Langue"
   }

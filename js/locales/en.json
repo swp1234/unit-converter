@@ -84,6 +84,9 @@
       "desc": "Draw your lucky numbers!"
     }
   },
+  "ads": {
+    "banner": "Ad Space"
+  },
   "language": {
     "select": "Select Language"
   }

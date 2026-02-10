@@ -84,6 +84,9 @@
       "desc": "Ziehe deine Glückszahlen!"
     }
   },
+  "ads": {
+    "banner": "Anzeigenplatz"
+  },
   "language": {
     "select": "Sprache auswählen"
   }
