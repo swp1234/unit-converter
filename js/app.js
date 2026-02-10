@@ -270,12 +270,12 @@ class UnitConverterApp {
 
             const btn = document.createElement('button');
             btn.className = 'quick-conversion-copy-btn';
-            btn.textContent = '복사';
+            btn.textContent = window.i18n?.t('messages.copy') || 'Copy';
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const text = `${conv.fromUnit} → ${conv.toUnit}`;
                 navigator.clipboard.writeText(text).then(() => {
-                    this.showToast('복사됨!');
+                    this.showToast(window.i18n?.t('messages.copied') || 'Copied!');
                 });
             });
 
@@ -322,7 +322,7 @@ class UnitConverterApp {
         const inputs = content.querySelectorAll('.unit-input');
 
         if (inputs.length < 2 || (!inputs[0].value && !inputs[1].value)) {
-            alert('변환 값을 입력하세요.');
+            alert(window.i18n?.t('messages.enterValue') || 'Please enter a value to convert.');
             return;
         }
 
@@ -339,7 +339,7 @@ class UnitConverterApp {
         this.favorites.unshift(favorite);
         this.saveToStorage();
         this.renderFavorites();
-        alert('저장되었습니다!');
+        alert(window.i18n?.t('messages.saved') || 'Saved!');
     }
 
     renderFavorites() {
@@ -347,7 +347,7 @@ class UnitConverterApp {
         list.innerHTML = '';
 
         if (this.favorites.length === 0) {
-            list.innerHTML = '<p style="color: var(--text-secondary); font-size: 13px; padding: 8px;">저장된 즐겨찾기가 없습니다</p>';
+            list.innerHTML = `<p style="color: var(--text-secondary); font-size: 13px; padding: 8px;">${window.i18n?.t('messages.noFavorites') || 'No saved favorites'}</p>`;
             return;
         }
 
@@ -363,7 +363,7 @@ class UnitConverterApp {
 
             const btn = document.createElement('button');
             btn.className = 'favorite-remove-btn';
-            btn.textContent = '삭제';
+            btn.textContent = window.i18n?.t('messages.delete') || 'Delete';
             btn.addEventListener('click', () => {
                 this.favorites = this.favorites.filter(f => f.id !== fav.id);
                 this.saveToStorage();
@@ -382,7 +382,7 @@ class UnitConverterApp {
         list.innerHTML = '';
 
         if (this.history.length === 0) {
-            list.innerHTML = '<p style="color: var(--text-secondary); font-size: 13px; padding: 8px;">변환 기록이 없습니다</p>';
+            list.innerHTML = `<p style="color: var(--text-secondary); font-size: 13px; padding: 8px;">${window.i18n?.t('messages.noHistory') || 'No conversion history'}</p>`;
             return;
         }
 
@@ -401,7 +401,7 @@ class UnitConverterApp {
 
             const btn = document.createElement('button');
             btn.className = 'history-remove-btn';
-            btn.textContent = '삭제';
+            btn.textContent = window.i18n?.t('messages.delete') || 'Delete';
             btn.addEventListener('click', () => {
                 this.history = this.history.filter(h => h.id !== entry.id);
                 this.saveToStorage();
@@ -419,7 +419,7 @@ class UnitConverterApp {
     }
 
     clearHistory() {
-        if (confirm('모든 기록을 삭제하시겠습니까?')) {
+        if (confirm(window.i18n?.t('messages.confirmClearHistory') || 'Delete all history?')) {
             this.history = [];
             this.saveToStorage();
             this.renderHistory();
@@ -466,7 +466,7 @@ class UnitConverterApp {
         container.innerHTML = '';
 
         if (premiumData.length === 0) {
-            container.innerHTML = '<p style="color: var(--text-secondary);">고급 변환 옵션이 없습니다.</p>';
+            container.innerHTML = `<p style="color: var(--text-secondary);">${window.i18n?.t('messages.noPremium') || 'No advanced conversion options available.'}</p>`;
             return;
         }
 
@@ -474,8 +474,9 @@ class UnitConverterApp {
             const div = document.createElement('div');
             div.className = 'premium-item';
 
+            const formulaLabel = window.i18n?.t('messages.formulaBased') || 'formula-based';
             const text = item.formula ?
-                `${item.fromLabel} ↔ ${item.toLabel} (공식 기반)` :
+                `${item.fromLabel} ↔ ${item.toLabel} (${formulaLabel})` :
                 `${item.fromLabel} ↔ ${item.toLabel} (${item.factor})`;
 
             const strong = document.createElement('strong');
@@ -486,7 +487,8 @@ class UnitConverterApp {
             p.style.color = 'var(--text-secondary)';
             p.style.fontSize = '12px';
             const exampleValue = item.formula ? item.formula(1).toFixed(4) : (item.factor).toFixed(4);
-            p.textContent = `예: 1 ${item.from} = ${exampleValue} ${item.to}`;
+            const exLabel = window.i18n?.t('messages.example') || 'e.g.';
+            p.textContent = `${exLabel}: 1 ${item.from} = ${exampleValue} ${item.to}`;
 
             div.appendChild(strong);
             div.appendChild(p);

@@ -87,6 +87,19 @@
   "ads": {
     "banner": "광고 영역"
   },
+  "messages": {
+    "copy": "복사",
+    "copied": "복사됨!",
+    "delete": "삭제",
+    "saved": "저장되었습니다!",
+    "enterValue": "변환 값을 입력하세요.",
+    "noFavorites": "저장된 즐겨찾기가 없습니다",
+    "noHistory": "변환 기록이 없습니다",
+    "confirmClearHistory": "모든 기록을 삭제하시겠습니까?",
+    "noPremium": "고급 변환 옵션이 없습니다.",
+    "formulaBased": "공식 기반",
+    "example": "예"
+  },
   "language": {
     "select": "언어 선택"
   }

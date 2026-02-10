@@ -87,6 +87,19 @@
   "ads": {
     "banner": "Ad Space"
   },
+  "messages": {
+    "copy": "Copy",
+    "copied": "Copied!",
+    "delete": "Delete",
+    "saved": "Saved!",
+    "enterValue": "Please enter a value to convert.",
+    "noFavorites": "No saved favorites",
+    "noHistory": "No conversion history",
+    "confirmClearHistory": "Delete all history?",
+    "noPremium": "No advanced conversion options available.",
+    "formulaBased": "formula-based",
+    "example": "e.g."
+  },
   "language": {
     "select": "Select Language"
   }
