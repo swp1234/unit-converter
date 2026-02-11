@@ -12,6 +12,21 @@
     --glass-border: rgba(255, 255, 255, 0.1);
 }
 
+/* Light Theme */
+[data-theme="light"] {
+    --primary: #2ed573;
+    --primary-dark: #27ae60;
+    --primary-light: #5dd98f;
+    --bg-dark: #f5f5fa;
+    --bg-surface: #ffffff;
+    --bg-surface-2: rgba(0, 0, 0, 0.03);
+    --text-primary: #1a1a2e;
+    --text-secondary: #5a5a70;
+    --border-color: rgba(46, 213, 115, 0.2);
+    --glass-bg: rgba(0, 0, 0, 0.03);
+    --glass-border: rgba(46, 213, 115, 0.15);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -887,6 +902,39 @@ body {
     color: var(--primary);
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 12px;
+    right: 56px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+[data-theme="light"] .theme-toggle {
+    background: rgba(46, 213, 115, 0.1);
+    border-color: rgba(46, 213, 115, 0.2);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    background: rgba(46, 213, 115, 0.2);
+}
+
 /* Recommendations Section */
 .recommendations-section { margin: 24px 0 0; padding: 0 16px; }
 .rec-title { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.5); margin-bottom: 12px; text-align: center; letter-spacing: 0.5px; }
@@ -897,6 +945,11 @@ body {
 .rec-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .rec-name { font-size: 14px; font-weight: 600; }
 .rec-desc { font-size: 12px; color: rgba(255,255,255,0.5); }
+
+[data-theme="light"] .rec-title { color: rgba(26, 26, 46, 0.5); }
+[data-theme="light"] .rec-card { background: rgba(0, 0, 0, 0.03); border-color: rgba(46, 213, 115, 0.15); color: #1a1a2e; }
+[data-theme="light"] .rec-card:hover { background: rgba(46, 213, 115, 0.1); }
+[data-theme="light"] .rec-desc { color: #5a5a70; }
 
 /* Game Footer & Back Link */
 .game-footer {

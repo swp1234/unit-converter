@@ -18,13 +18,19 @@
     <!-- Language Selector Styles -->
     <style>
         .language-selector { position: fixed; top: 20px; right: 20px; z-index: 1000; }
-        .lang-btn { background: rgba(59,130,246,0.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(59,130,246,0.4); color: #fff; font-size: 20px; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; transition: all 0.2s ease; }
-        .lang-btn:hover { background: rgba(59,130,246,0.5); transform: scale(1.05); }
-        .lang-menu { position: absolute; top: 52px; right: 0; background: rgba(15,15,30,0.95); backdrop-filter: blur(20px); border: 1px solid rgba(59,130,246,0.3); border-radius: 12px; padding: 8px; min-width: 150px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+        .lang-btn { background: rgba(46,213,115,0.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(46,213,115,0.4); color: #fff; font-size: 20px; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; transition: all 0.2s ease; }
+        .lang-btn:hover { background: rgba(46,213,115,0.5); transform: scale(1.05); }
+        .lang-menu { position: absolute; top: 52px; right: 0; background: rgba(15,15,30,0.95); backdrop-filter: blur(20px); border: 1px solid rgba(46,213,115,0.3); border-radius: 12px; padding: 8px; min-width: 150px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
         .lang-menu.hidden { display: none; }
         .lang-option { width: 100%; padding: 10px 14px; background: transparent; border: none; text-align: left; cursor: pointer; border-radius: 8px; font-size: 14px; color: #e0e0f8; transition: background 0.2s; }
-        .lang-option:hover { background: rgba(59,130,246,0.2); }
-        .lang-option.active { background: rgba(59,130,246,0.3); font-weight: 600; }
+        .lang-option:hover { background: rgba(46,213,115,0.2); }
+        .lang-option.active { background: rgba(46,213,115,0.3); font-weight: 600; }
+        [data-theme="light"] .lang-btn { background: rgba(46,213,115,0.2); border-color: rgba(46,213,115,0.3); }
+        [data-theme="light"] .lang-btn:hover { background: rgba(46,213,115,0.3); }
+        [data-theme="light"] .lang-menu { background: rgba(255,255,255,0.95); border-color: rgba(46,213,115,0.2); }
+        [data-theme="light"] .lang-option { color: #1a1a2e; }
+        [data-theme="light"] .lang-option:hover { background: rgba(46,213,115,0.1); }
+        [data-theme="light"] .lang-option.active { background: rgba(46,213,115,0.2); }
     </style>
     <!-- Open Graph & Social Media Meta Tags -->
     <meta property="og:title" content="단위 변환기 Pro ⇄ - 평수·온도·무게 한번에">
@@ -128,6 +134,9 @@
             <button class="lang-option" data-lang="ru">🇷🇺 Русский</button>
         </div>
     </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀️</button>
 
     <!-- Top Banner Ad -->
     <div class="ad-container ad-top">

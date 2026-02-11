@@ -12,6 +12,7 @@ class UnitConverterApp {
 
     init() {
         this.loadFromStorage();
+        this.setupTheme();
         this.setupEventListeners();
         this.setupSwapButtons();
         this.setupPresetChips();
@@ -19,6 +20,27 @@ class UnitConverterApp {
         this.renderHistory();
         this.renderQuickConversions();
         this.renderPremiumContent();
+    }
+
+    // Theme Management
+    setupTheme() {
+        const savedTheme = localStorage.getItem('unitConverter_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+        }
+    }
+
+    toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('unitConverter_theme', next);
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.textContent = next === 'light' ? '🌙' : '☀️';
+        }
     }
 
     // LocalStorage Management
@@ -53,6 +75,12 @@ class UnitConverterApp {
             input.addEventListener('focus', () => input.parentElement.classList.add('active'));
             input.addEventListener('blur', () => input.parentElement.classList.remove('active'));
         });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => this.toggleTheme());
+        }
 
         // Favorites and history
         document.getElementById('add-favorite-btn').addEventListener('click', () => this.addFavorite());
