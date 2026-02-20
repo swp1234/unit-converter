@@ -972,6 +972,14 @@ body {
 .back-link:hover, .home-link:hover {
     color: rgba(255,255,255,0.7);
 }
+[data-theme="light"] .back-link,
+[data-theme="light"] .home-link {
+    color: rgba(26,26,46,0.4);
+}
+[data-theme="light"] .back-link:hover,
+[data-theme="light"] .home-link:hover {
+    color: rgba(26,26,46,0.7);
+}
 
 /* === Accessibility Improvements === */
 button:focus-visible,a:focus-visible,input:focus-visible,[role="button"]:focus-visible{outline:3px solid #1abc9c;outline-offset:2px;}
