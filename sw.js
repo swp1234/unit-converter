@@ -1,11 +1,12 @@
-const CACHE_NAME = 'unit-converter-v1';
+const CACHE_NAME = 'unit-converter-v2';
 const URLS_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/manifest.json',
-    '/css/style.css',
-    '/js/app.js',
-    '/js/conversion-data.js'
+    './',
+    './index.html',
+    './manifest.json',
+    './css/style.css',
+    './js/app.js',
+    './js/conversion-data.js',
+    './js/i18n.js'
 ];
 
 // Install event
@@ -17,7 +18,7 @@ self.addEventListener('install', event => {
     );
 });
 
-// Activate event
+// Activate event - clear old caches
 self.addEventListener('activate', event => {
     event.waitUntil(
         caches.keys().then(cacheNames => {
@@ -37,7 +38,6 @@ self.addEventListener('fetch', event => {
     event.respondWith(
         fetch(event.request)
             .then(response => {
-                // Cache successful responses
                 if (response && response.status === 200) {
                     const responseToCache = response.clone();
                     caches.open(CACHE_NAME)
@@ -46,9 +46,8 @@ self.addEventListener('fetch', event => {
                 return response;
             })
             .catch(() => {
-                // Fallback to cache
                 return caches.match(event.request)
-                    .then(response => response || new Response('오프라인 상태입니다.', { status: 503 }));
+                    .then(response => response || new Response('Offline', { status: 503 }));
             })
     );
 });

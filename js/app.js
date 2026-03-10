@@ -83,10 +83,10 @@ class UnitConverterApp {
         }
 
         // Favorites and history
-        document.getElementById('add-favorite-btn').addEventListener('click', () => this.addFavorite());
-        document.getElementById('clear-history-btn').addEventListener('click', () => this.clearHistory());
-        document.getElementById('favorites-toggle').addEventListener('click', () => this.toggleSection('favorites'));
-        document.getElementById('history-toggle').addEventListener('click', () => this.toggleSection('history'));
+        document.getElementById('add-favorite-btn')?.addEventListener('click', () => this.addFavorite());
+        document.getElementById('clear-history-btn')?.addEventListener('click', () => this.clearHistory());
+        document.getElementById('favorites-toggle')?.addEventListener('click', () => this.toggleSection('favorites'));
+        document.getElementById('history-toggle')?.addEventListener('click', () => this.toggleSection('history'));
 
         const quickToggle = document.getElementById('quick-conversions-toggle');
         if (quickToggle) {
@@ -94,18 +94,18 @@ class UnitConverterApp {
         }
 
         // Premium content
-        document.getElementById('premium-btn').addEventListener('click', () => this.showPremiumModal());
-        document.getElementById('premium-close-btn').addEventListener('click', () => this.closePremiumModal());
+        document.getElementById('premium-btn')?.addEventListener('click', () => this.showPremiumModal());
+        document.getElementById('premium-close-btn')?.addEventListener('click', () => this.closePremiumModal());
 
         // Ad modal
-        document.getElementById('ad-close-btn').addEventListener('click', () => this.closeAdModal());
+        document.getElementById('ad-close-btn')?.addEventListener('click', () => this.closeAdModal());
 
         // Close modals when clicking outside
-        document.getElementById('premium-modal').addEventListener('click', (e) => {
+        document.getElementById('premium-modal')?.addEventListener('click', (e) => {
             if (e.target.id === 'premium-modal') this.closePremiumModal();
         });
 
-        document.getElementById('ad-modal').addEventListener('click', (e) => {
+        document.getElementById('ad-modal')?.addEventListener('click', (e) => {
             if (e.target.id === 'ad-modal' && this.adCountdown <= 0) this.closeAdModal();
         });
     }
@@ -372,6 +372,7 @@ class UnitConverterApp {
 
     renderFavorites() {
         const list = document.getElementById('favorites-list');
+        if (!list) return;
         list.innerHTML = '';
 
         if (this.favorites.length === 0) {
@@ -407,6 +408,7 @@ class UnitConverterApp {
 
     renderHistory() {
         const list = document.getElementById('history-list');
+        if (!list) return;
         list.innerHTML = '';
 
         if (this.history.length === 0) {
@@ -482,13 +484,15 @@ class UnitConverterApp {
 
     showPremiumModal() {
         this.showAdModal(() => {
-            document.getElementById('premium-modal').style.display = 'flex';
+            const modal = document.getElementById('premium-modal');
+            if (modal) modal.style.display = 'flex';
             this.populatePremiumContent();
         });
     }
 
     populatePremiumContent() {
         const container = document.getElementById('premium-content');
+        if (!container) return;
         const premiumData = PREMIUM_CONVERSIONS[this.currentCategory] || [];
 
         container.innerHTML = '';
@@ -526,7 +530,8 @@ class UnitConverterApp {
     }
 
     closePremiumModal() {
-        document.getElementById('premium-modal').style.display = 'none';
+        const modal = document.getElementById('premium-modal');
+        if (modal) modal.style.display = 'none';
     }
 
     // Ad Management
@@ -543,6 +548,11 @@ class UnitConverterApp {
         const modal = document.getElementById('ad-modal');
         const closeBtn = document.getElementById('ad-close-btn');
         const countdownText = document.getElementById('countdown-num');
+
+        if (!modal || !closeBtn || !countdownText) {
+            if (callback) callback();
+            return;
+        }
 
         modal.style.display = 'flex';
         closeBtn.style.display = 'none';
@@ -565,7 +575,8 @@ class UnitConverterApp {
     }
 
     closeAdModal() {
-        document.getElementById('ad-modal').style.display = 'none';
+        const modal = document.getElementById('ad-modal');
+        if (modal) modal.style.display = 'none';
     }
 }
 

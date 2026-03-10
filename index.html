@@ -338,6 +338,50 @@
                     </div>
                 </div>
             </div>
+        </main>
+
+        <!-- Favorites Section -->
+        <div class="favorites-section">
+            <div class="section-header" id="favorites-toggle">
+                <h2 data-i18n="sections.favorites">Favorites</h2>
+                <button class="toggle-btn">&#x25BC;</button>
+            </div>
+            <div class="favorites-list" id="favorites-list" style="display:none;"></div>
+            <button class="add-favorite-btn" id="add-favorite-btn" data-i18n="buttons.addFavorite">Add to Favorites</button>
+        </div>
+
+        <!-- History Section -->
+        <div class="history-section">
+            <div class="section-header" id="history-toggle">
+                <h2 data-i18n="sections.history">History</h2>
+                <button class="toggle-btn">&#x25BC;</button>
+            </div>
+            <div class="history-list" id="history-list" style="display:none;"></div>
+            <button class="clear-history-btn" id="clear-history-btn" data-i18n="buttons.clearHistory">Clear History</button>
+        </div>
+
+        <!-- Premium Button -->
+        <button class="premium-btn" id="premium-btn" data-i18n="buttons.premium">Advanced Conversions</button>
+
+    </div><!-- /.app-container -->
+
+    <!-- Premium Modal -->
+    <div class="premium-modal" id="premium-modal" style="display:none;" role="dialog" aria-label="Premium conversions">
+        <div class="premium-modal-content">
+            <button class="premium-close-btn" id="premium-close-btn" aria-label="Close">&times;</button>
+            <h2 data-i18n="sections.premiumTitle">Advanced Conversions</h2>
+            <div id="premium-content"></div>
+        </div>
+    </div>
+
+    <!-- Ad Modal -->
+    <div class="ad-modal" id="ad-modal" style="display:none;" role="dialog" aria-label="Advertisement">
+        <div class="ad-modal-content">
+            <div class="ad-countdown" data-i18n="ads.countdown">Ad closes in <span id="countdown-num">5</span>s</div>
+            <div class="ad-placeholder">Ad</div>
+            <button class="ad-close-btn" id="ad-close-btn" style="display:none;" data-i18n="buttons.close">Close</button>
+        </div>
+    </div>
 
     <script src="js/conversion-data.js"></script>
     <script src="js/i18n.js"></script>
