@@ -102,5 +102,12 @@
   },
   "language": {
     "select": "选择语言"
+  },
+  "related": {
+    "title": "探索更多",
+    "shoppingCalc": "购物计算器",
+    "bmiCalculator": "BMI计算器",
+    "qrGenerator": "QR生成器",
+    "sebatdonCalc": "租金计算器"
   }
 }

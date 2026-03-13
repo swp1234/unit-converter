@@ -102,5 +102,12 @@
   },
   "language": {
     "select": "भाषा चुनें"
+  },
+  "related": {
+    "title": "और खोजें",
+    "shoppingCalc": "शॉपिंग कैलकुलेटर",
+    "bmiCalculator": "BMI कैलकुलेटर",
+    "qrGenerator": "QR जनरेटर",
+    "sebatdonCalc": "किराया कैलकुलेटर"
   }
 }

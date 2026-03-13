@@ -102,5 +102,12 @@
   },
   "language": {
     "select": "Dil Seç"
+  },
+  "related": {
+    "title": "Daha fazla keşfet",
+    "shoppingCalc": "Alışveriş hesaplayıcı",
+    "bmiCalculator": "VKİ hesaplayıcı",
+    "qrGenerator": "QR oluşturucu",
+    "sebatdonCalc": "Kira hesaplayıcı"
   }
 }

@@ -102,5 +102,12 @@
   },
   "language": {
     "select": "Selecionar Idioma"
+  },
+  "related": {
+    "title": "Explore mais",
+    "shoppingCalc": "Calculadora de compras",
+    "bmiCalculator": "Calculadora IMC",
+    "qrGenerator": "Gerador QR",
+    "sebatdonCalc": "Calculadora de aluguel"
   }
 }

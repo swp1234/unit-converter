@@ -102,5 +102,12 @@
   },
   "language": {
     "select": "Выберите язык"
+  },
+  "related": {
+    "title": "Ещё интересное",
+    "shoppingCalc": "Калькулятор покупок",
+    "bmiCalculator": "Калькулятор ИМТ",
+    "qrGenerator": "QR-генератор",
+    "sebatdonCalc": "Калькулятор аренды"
   }
 }

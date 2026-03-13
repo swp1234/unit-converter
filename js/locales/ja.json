@@ -102,5 +102,12 @@
   },
   "language": {
     "select": "言語を選択"
+  },
+  "related": {
+    "title": "もっと楽しむ",
+    "shoppingCalc": "買い物計算機",
+    "bmiCalculator": "BMI計算機",
+    "qrGenerator": "QRジェネレーター",
+    "sebatdonCalc": "家賃計算機"
   }
 }

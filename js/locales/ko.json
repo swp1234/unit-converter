@@ -102,5 +102,12 @@
   },
   "language": {
     "select": "언어 선택"
+  },
+  "related": {
+    "title": "더 많은 콘텐츠",
+    "shoppingCalc": "쇼핑 계산기",
+    "bmiCalculator": "BMI 계산기",
+    "qrGenerator": "QR 생성기",
+    "sebatdonCalc": "세빌더칼"
   }
 }

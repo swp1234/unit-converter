@@ -102,5 +102,12 @@
   },
   "language": {
     "select": "Pilih Bahasa"
+  },
+  "related": {
+    "title": "Jelajahi lainnya",
+    "shoppingCalc": "Kalkulator belanja",
+    "bmiCalculator": "Kalkulator BMI",
+    "qrGenerator": "Generator QR",
+    "sebatdonCalc": "Kalkulator sewa"
   }
 }

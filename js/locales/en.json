@@ -102,5 +102,12 @@
   },
   "language": {
     "select": "Select Language"
+  },
+  "related": {
+    "title": "More to Explore",
+    "shoppingCalc": "Shopping Calc",
+    "bmiCalculator": "BMI Calculator",
+    "qrGenerator": "QR Generator",
+    "sebatdonCalc": "Rent Calculator"
   }
 }
