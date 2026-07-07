@@ -584,8 +584,7 @@ class UnitConverterApp {
 let app;
 (async function initI18n() {
     try {
-        await i18n.loadTranslations(i18n.getCurrentLanguage());
-        i18n.updateUI();
+        await i18n.setLanguage(i18n.getCurrentLanguage());
 
         const langToggle = document.getElementById('lang-toggle');
         const langMenu = document.getElementById('lang-menu');
