@@ -601,6 +601,7 @@ let app;
                 langOptions.forEach(o => o.classList.remove('active'));
                 opt.classList.add('active');
                 langMenu.classList.add('hidden');
+                preserveLanguageLinks();
             });
         });
     } catch (e) {
@@ -609,6 +610,7 @@ let app;
 
     // 앱 시작
     app = new UnitConverterApp();
+    preserveLanguageLinks();
 
     // Hide app loader
     const loader = document.getElementById('app-loader');
@@ -617,3 +619,33 @@ let app;
         setTimeout(() => loader.remove(), 300);
     }
 })();
+
+function preserveLanguageLinks() {
+    try {
+        const lang = (window.i18n && typeof window.i18n.getCurrentLanguage === 'function' ? window.i18n.getCurrentLanguage() : null) || new URLSearchParams(window.location.search).get('lang') || 'en';
+        document.querySelectorAll('.related-card, a[href^="/shopping-calc/"], a[href^="/bmi-calculator/"], a[href^="/dday-counter/"], a[href^="/sebatdon-calc/"]').forEach(function(a) {
+            const href = a.getAttribute('href');
+            if (!href || href.startsWith('/portal/')) return;
+            const url = new URL(href, window.location.origin);
+            if (lang) {
+                url.searchParams.set('lang', lang);
+            }
+            url.searchParams.set('source', 'unit_converter_result');
+            a.setAttribute('href', url.pathname + url.search + url.hash);
+
+            if (!a.__ctaBound) {
+                a.__ctaBound = true;
+                a.addEventListener('click', function() {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'content_cta_click', {
+                            cta_surface: 'related_tools',
+                            destination: a.getAttribute('href'),
+                            source: 'unit_converter_result',
+                            lang: lang || 'en'
+                        });
+                    }
+                });
+            }
+        });
+    } catch (e) {}
+}
