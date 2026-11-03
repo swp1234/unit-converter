@@ -544,34 +544,9 @@ class UnitConverterApp {
         }
     }
 
+    // 광고 강제 잠금 해제 금지 - 즉시 콜백 실행 (구글 정책 준수)
     showAdModal(callback) {
-        const modal = document.getElementById('ad-modal');
-        const closeBtn = document.getElementById('ad-close-btn');
-        const countdownText = document.getElementById('countdown-num');
-
-        if (!modal || !closeBtn || !countdownText) {
-            if (callback) callback();
-            return;
-        }
-
-        modal.style.display = 'flex';
-        closeBtn.style.display = 'none';
-        this.adCountdown = 5;
-
-        const countdownInterval = setInterval(() => {
-            this.adCountdown--;
-            countdownText.textContent = this.adCountdown;
-
-            if (this.adCountdown <= 0) {
-                clearInterval(countdownInterval);
-                closeBtn.style.display = 'block';
-
-                if (callback) {
-                    callback();
-                    modal.style.display = 'none';
-                }
-            }
-        }, 1000);
+        if (callback) callback();
     }
 
     closeAdModal() {
