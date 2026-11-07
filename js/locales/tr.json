@@ -109,5 +109,32 @@
     "bmiCalculator": "VKİ hesaplayıcı",
     "sebatdonCalc": "Kira hesaplayıcı",
     "ddayCounter": "Geri Sayım Sayacı"
+  },
+  "about": {
+    "toggle": "Unit Converter Pro ve Uluslararası Metroloji Standartları Hakkında",
+    "heading1": "Uluslararası Birimler Sistemi (SI) ve Metrolojik Hassasiyet",
+    "text1": "Metroloji ölçüm bilimidir. BIPM tarafından belirlenen Uluslararası Birimler Sistemi (SI), evrensel temel standartları tanımlar. Bu dönüştürücü; modern SI standartlarını, İngiliz-Amerikan imperyal sistemini ve Doğu Asya geleneksel birimlerini yüksek hassasiyetle dönüştürür.",
+    "boundary": "Hassasiyet Bildirimi: Hesaplamalar IEEE 754 çift duyarlıklı kayan nokta standardını kullanır. Yasal metroloji ve kalibrasyon için resmi kurum standartlarını esas alınız.",
+    "heading2": "Dört Temel Ölçüm Alanı",
+    "pArea": "Alan ve Arazi Ölçümü:",
+    "dArea": "Metrekare (m²) ve akre değerlerini geleneksel Asya pyeong (1 pyeong ≈ 3,3058 m²) birimiyle dönüştürür.",
+    "pWeight": "Kütle ve Geleneksel Ağırlık Birimleri:",
+    "dWeight": "Kilogram (kg) ve libre (lb) birimlerini geleneksel don (3,75g) ve nyang (37,5g) ile bağlar.",
+    "pTemp": "Termodinamik Sıcaklık Ölçekleri:",
+    "dTemp": "Celsius (°C), Fahrenheit (°F) ve mutlak Kelvin (K) ölçekleri arasında dönüşüm sağlar.",
+    "pVolume": "Sıvı ve Kuru Hacim Ölçüleri:",
+    "dVolume": "Litre (L), ABD galonu (gal) ve geleneksel hacim ölçeklerini dönüştürür.",
+    "faqTitle": "Sıkça Sorulan Sorular (SSS)",
+    "faq1Q": "SI ve İngiliz birimleri arasındaki dönüşüm ne kadar hassastır?",
+    "faq1A": "BIPM ve NIST standartlarına tam uyumlu kesin dönüşüm sabitleri kullanılmaktadır.",
+    "faq2Q": "Pyeong ile metrekare arasındaki kesin oran nedir?",
+    "faq2A": "1 pyeong tam olarak 400/121 metrekareye (yaklaşık 3,305785 m²) eşittir; 1 m² ise yaklaşık 0,3025 pyeongdur.",
+    "faq3Q": "Geçmişim veya favori birimlerim harici sunucularda saklanıyor mu?",
+    "faq3A": "Asla. Tüm işlemler ve kayıtlar tamamen tarayıcınızın yerel hafızasında (localStorage) saklanır.",
+    "reviewDate": "Editöryal İnceleme: Kasım 2026",
+    "reviewTeam": "DopaBrain Hesaplamalı Metroloji Serisi"
+  },
+  "nav": {
+    "back": "DopaBrain Ana Sayfa"
   }
 }

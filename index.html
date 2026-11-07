@@ -7,7 +7,7 @@
     <meta name="robots" content="max-image-preview:large">
     <meta name="theme-color" content="#f39c12">
     <meta name="description" content="Convert 40+ units instantly across 6 categories: length, weight, temperature, area, volume, and speed. Save favorites and view history. Try free!">
-    <meta name="dateModified" content="2026-10-24">
+    <meta name="dateModified" content="2026-11-07">
     <meta name="keywords" content="단위 변환기, 평수 계산, 제곱미터 변환, 온도 변환, 무게 변환, 길이 변환, 평 계산기, 한국 전통 단위, 국제 단위 변환">
     <title>Unit Converter Pro - Free Length, Weight, Temp | DopaBrain</title>
     <link rel="canonical" href="https://dopabrain.com/unit-converter/">
@@ -140,6 +140,38 @@
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How accurately are international SI and customary units converted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Conversions adhere strictly to BIPM and NIST international metrology standards using exact conversion constants (e.g., 1 pound = 0.45359237 kg, 1 inch = 25.4 mm)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the exact conversion formula between pyeong and square meters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By historical East Asian metrology standards, 1 pyeong equals exactly 400/121 square meters (approximately 3.305785 m²), and 1 m² equals approximately 0.3025 pyeong."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my conversion histories or custom favorites saved on external servers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Never. All conversion operations, recent history logs, and saved favorites are processed and stored locally in your browser via localStorage with zero external server communication."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link" data-i18n="accessibility.skipMain">Skip to main content</a>
@@ -391,6 +423,49 @@
         <!-- Premium Button -->
         <button class="premium-btn" id="premium-btn" data-i18n="buttons.premium">Advanced Conversions</button>
 
+        <!-- Science & E-E-A-T Metrology Guide Section -->
+        <section class="about-section collapsible-section" id="about-section" style="max-width:680px;margin:28px auto;padding:0 16px;">
+            <details style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
+                <summary data-i18n="about.toggle" style="min-height:48px;padding:14px 18px;color:#f39c12;cursor:pointer;font-size:15px;font-weight:700;list-style:none;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;touch-action:manipulation;">About Unit Converter Pro & International Metrology Standards</summary>
+                <div class="about-content" style="padding:0 18px 20px;box-sizing:border-box;">
+                    <h2 data-i18n="about.heading1" style="font-size:15px;color:#fff;margin:14px 0 8px;font-weight:700;border-left:3px solid #f39c12;padding-left:8px;">International System of Units (SI) & Metrological Precision</h2>
+                    <p data-i18n="about.text1" style="font-size:13px;line-height:1.7;color:#cbd5e1;margin:0 0 12px;">Metrology is the scientific study of measurement. Established by the Bureau International des Poids et Mesures (BIPM), the International System of Units (SI) provides universally standardized base units (meter, kilogram, second, kelvin). This converter integrates modern SI standards with Imperial and traditional East Asian units with high floating-point precision.</p>
+                    <p class="about-note" data-i18n="about.boundary" style="font-size:12px;font-style:italic;color:#94a3b8;border-left:3px solid #f39c12;padding-left:10px;margin:12px 0 16px;line-height:1.6;">Precision Notice: Conversion calculations use standard IEEE 754 double-precision arithmetic. For critical laboratory calibration or legal surveying, consult official national standards institutes (e.g., NIST, KRISS, BIPM).</p>
+
+                    <h3 data-i18n="about.heading2" style="font-size:15px;color:#fff;margin:18px 0 10px;font-weight:700;border-left:3px solid #f39c12;padding-left:8px;">Core Measurement Frameworks</h3>
+                    <ul class="about-list" style="list-style:none;padding:0;margin:0 0 16px;">
+                        <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.pArea">Area & Land Measurement:</strong> <span data-i18n="about.dArea">Converts square meters (m²) and acres with traditional Asian pyeong (1 pyeong = 400/121 m² ≈ 3.3058 m²).</span></li>
+                        <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.pWeight">Mass & Traditional Gold/Herb Units:</strong> <span data-i18n="about.dWeight">Bridges metric kilograms/grams with avoirdupois pounds/ounces and traditional don (3.75g) and nyang (37.5g).</span></li>
+                        <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.pTemp">Thermodynamic Temperature Scales:</strong> <span data-i18n="about.dTemp">Calculates affine conversions between Celsius (°C), Fahrenheit (°F = °C × 9/5 + 32), and absolute Kelvin (K).</span></li>
+                        <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.pVolume">Fluid & Dry Volume Metrics:</strong> <span data-i18n="about.dVolume">Computes conversions across metric liters (L), US gallons (gal), and traditional doe and hop capacities.</span></li>
+                    </ul>
+
+                    <h3 data-i18n="about.faqTitle" style="font-size:15px;color:#fff;margin:18px 0 10px;font-weight:700;border-left:3px solid #f39c12;padding-left:8px;">Frequently Asked Questions</h3>
+                    <div class="faq-section" style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
+                        <div class="faq-item" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px 14px;">
+                            <strong data-i18n="about.faq1Q" style="display:block;font-size:13px;font-weight:600;color:#fff;margin-bottom:6px;">Q: How accurately are international SI and customary units converted?</strong>
+                            <p data-i18n="about.faq1A" style="font-size:12px !important;line-height:1.6 !important;color:#94a3b8 !important;margin:0 !important;">A: Conversions adhere strictly to BIPM and NIST international metrology standards using exact conversion constants (e.g., 1 pound = 0.45359237 kg, 1 inch = 25.4 mm).</p>
+                        </div>
+                        <div class="faq-item" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px 14px;">
+                            <strong data-i18n="about.faq2Q" style="display:block;font-size:13px;font-weight:600;color:#fff;margin-bottom:6px;">Q: What is the exact conversion formula between pyeong and square meters?</strong>
+                            <p data-i18n="about.faq2A" style="font-size:12px !important;line-height:1.6 !important;color:#94a3b8 !important;margin:0 !important;">A: By historical East Asian metrology standards, 1 pyeong equals exactly 400/121 square meters (approximately 3.305785 m²), and 1 m² equals approximately 0.3025 pyeong.</p>
+                        </div>
+                        <div class="faq-item" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px 14px;">
+                            <strong data-i18n="about.faq3Q" style="display:block;font-size:13px;font-weight:600;color:#fff;margin-bottom:6px;">Q: Are my conversion histories or custom favorites saved on external servers?</strong>
+                            <p data-i18n="about.faq3A" style="font-size:12px !important;line-height:1.6 !important;color:#94a3b8 !important;margin:0 !important;">A: Never. All conversion operations, recent history logs, and saved favorites are processed and stored locally in your browser via localStorage with zero external server communication.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-review-meta" style="font-size:11px;color:#64748b;margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);">
+                        <span data-i18n="about.reviewDate">Editorial Review: November 2026</span> • <span data-i18n="about.reviewTeam">DopaBrain Computational Metrology Series</span>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <footer style="text-align:center;padding:16px 16px 24px;">
+            <a href="/portal/" data-i18n="nav.back" style="color:var(--text-secondary,#a0a0b8);text-decoration:none;font-size:14px;display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;">DopaBrain Home</a>
+        </footer>
     </div><!-- /.app-container -->
 
     <!-- Premium Modal -->

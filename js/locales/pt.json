@@ -109,5 +109,32 @@
     "bmiCalculator": "Calculadora IMC",
     "sebatdonCalc": "Calculadora de aluguel",
     "ddayCounter": "Contador D-Day"
+  },
+  "about": {
+    "toggle": "Sobre o Unit Converter Pro e Padrões Internacionais de Metrologia",
+    "heading1": "Sistema Internacional de Unidades (SI) e Precisão Metrológica",
+    "text1": "A metrologia é a ciência da medição. Estabelecido pelo Bureau Internacional de Pesos e Medidas (BIPM), o SI define padrões fundamentais (metro, quilograma, kelvin). Este conversor une as normas do SI, o sistema imperial e unidades tradicionais com alta precisão de ponto flutuante.",
+    "boundary": "Aviso de Precisão: Cálculos usam ponto flutuante de precisão dupla IEEE 754. Para fins legais ou laboratoriais críticos, consulte institutos oficiais (INMETRO, BIPM, NIST).",
+    "heading2": "Quatro Eixos de Medição",
+    "pArea": "Área e Medição de Imóveis:",
+    "dArea": "Converte metros quadrados (m²) e acres com o tradicional pyeong asiático (1 pyeong ≈ 3,3058 m²).",
+    "pWeight": "Massa e Unidades Tradicionais:",
+    "dWeight": "Conecta quilogramas (kg) e libras (lb) a unidades asiáticas tradicionais como don (3,75g) e nyang (37,5g).",
+    "pTemp": "Escalas de Temperatura Termodinâmica:",
+    "dTemp": "Calcula transformações afins entre Celsius (°C), Fahrenheit (°F) e Kelvin absoluto (K).",
+    "pVolume": "Métricas de Volume e Capacidade:",
+    "dVolume": "Executa conversões entre litros (L), galões americanos (gal) e medidas tradicionais de grãos.",
+    "faqTitle": "Perguntas Frequentes (FAQ)",
+    "faq1Q": "Qual é a exatidão das conversões entre SI e imperial?",
+    "faq1A": "As fórmulas obedecem aos padrões do BIPM e NIST usando constantes exatas (ex: 1 libra = 0,45359237 kg).",
+    "faq2Q": "Qual é a equivalência entre pyeong e metros quadrados?",
+    "faq2A": "1 pyeong equivale a 400/121 metros quadrados (aproximadamente 3,305785 m²), e 1 m² equivale a cerca de 0,3025 pyeong.",
+    "faq3Q": "Os dados de histórico ou favoritos saem do navegador?",
+    "faq3A": "Não. Todas as conversões e favoritos permanecem 100% armazenados localmente no localStorage.",
+    "reviewDate": "Revisão Editorial: Novembro de 2026",
+    "reviewTeam": "DopaBrain Metrologia Computacional"
+  },
+  "nav": {
+    "back": "Início DopaBrain"
   }
 }

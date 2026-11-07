@@ -109,5 +109,32 @@
     "bmiCalculator": "BMI-Rechner",
     "sebatdonCalc": "Mietrechner",
     "ddayCounter": "Stichtag-Zähler"
+  },
+  "about": {
+    "toggle": "Über Unit Converter Pro & Internationale Metrologiestandards",
+    "heading1": "Internationales Einheitensystem (SI) & Metrologische Präzision",
+    "text1": "Die Metrologie ist die Wissenschaft des Messens. Das vom Internationalen Büro für Maß und Gewicht (BIPM) definierte SI-System stellt weltweite Basiseinheiten (Meter, Kilogramm, Kelvin) bereit. Dieser Konverter verknüpft SI-, angloamerikanische und ostasiatische Maßeinheiten mit hoher Rechengenauigkeit.",
+    "boundary": "Genauigkeitshinweis: Die Berechnungen nutzen IEEE 754-Gleitkommaarithmetik mit doppelter Genauigkeit. Für amtliche Eichungen gelten die Normen der Physikalisch-Technischen Bundesanstalt (PTB) und des BIPM.",
+    "heading2": "Vier Zentrale Messbereiche",
+    "pArea": "Flächen- und Grundstücksmaße:",
+    "dArea": "Rechnet Quadratmeter (m²) und Acre in traditionelle Pyeong-Einheiten um (1 Pyeong ≈ 3,3058 m²).",
+    "pWeight": "Masse & Traditionelle Feinunzen:",
+    "dWeight": "Verbindet Kilogramm (kg) und Pfund (lb) mit traditionellen Einheiten wie Don (3,75 g) und Nyang (37,5 g).",
+    "pTemp": "Thermodynamische Temperaturskalen:",
+    "dTemp": "Berechnet affine Umrechnungen zwischen Celsius (°C), Fahrenheit (°F) und absolutem Kelvin (K).",
+    "pVolume": "Flüssigkeits- und Raumvolumen:",
+    "dVolume": "Ermöglicht Konvertierungen zwischen Litern (L), US-Gallonen (gal) und traditionellen Hohlmaßen.",
+    "faqTitle": "Häufig gestellte Fragen (FAQ)",
+    "faq1Q": "Wie exakt sind die Umrechnungen zwischen SI- und Imperial-Einheiten?",
+    "faq1A": "Sie basieren streng auf den internationalen BIPM- und NIST-Standards mit exakten Definitionskonstanten.",
+    "faq2Q": "Wie lautet die genaue Umrechnung zwischen Pyeong und m²?",
+    "faq2A": "1 Pyeong entspricht exakt 400/121 Quadratmetern (ca. 3,305785 m²); 1 m² entspricht ca. 0,3025 Pyeong.",
+    "faq3Q": "Werden meine Umrechnungen auf Servern gespeichert?",
+    "faq3A": "Nein. Alle Favoriten und Verläufe verbleiben zu 100 % im lokalen Speicher Ihres Browsers.",
+    "reviewDate": "Redaktionelle Prüfung: November 2026",
+    "reviewTeam": "DopaBrain Metrologie-Serie"
+  },
+  "nav": {
+    "back": "DopaBrain Startseite"
   }
 }

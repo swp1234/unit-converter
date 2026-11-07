@@ -109,5 +109,32 @@
     "bmiCalculator": "Calculateur IMC",
     "sebatdonCalc": "Calculateur de loyer",
     "ddayCounter": "Compteur de Jour J"
+  },
+  "about": {
+    "toggle": "À propos d'Unit Converter Pro & Normes Métrologiques Internationales",
+    "heading1": "Système International d'Unités (SI) et Précision Métrologique",
+    "text1": "La métrologie est la science de la mesure. Établi par le Bureau International des Poids et Mesures (BIPM), le Système International (SI) fournit les unités de base mondiales. Ce convertisseur intègre les normes SI, le système impérial et les unités traditionnelles avec une haute précision numérique.",
+    "boundary": "Note de précision : Les calculs reposent sur la norme IEEE 754 en double précision. Pour les étalonnages légaux, référez-vous aux instituts nationaux officiels (BIPM, LNE, NIST).",
+    "heading2": "Quatre Domaines de Mesure Fondamentaux",
+    "pArea": "Surfaces et Mesures Agraires :",
+    "dArea": "Convertit les mètres carrés (m²) et acres avec l'unité asiatique traditionnelle pyeong (1 pyeong ≈ 3,3058 m²).",
+    "pWeight": "Masse et Mesures Précises :",
+    "dWeight": "Relie les kilogrammes (kg) et livres (lb) aux mesures traditionnelles don (3,75 g) et nyang (37,5 g).",
+    "pTemp": "Échelles de Température Thermodynamique :",
+    "dTemp": "Calcule les conversions entre Celsius (°C), Fahrenheit (°F) et le Kelvin absolu (K).",
+    "pVolume": "Volumes et Capacités :",
+    "dVolume": "Convertit les litres (L), gallons américains (gal) et mesures traditionnelles de volume.",
+    "faqTitle": "Foire Aux Questions (FAQ)",
+    "faq1Q": "Quelle est la précision des conversions SI et impériales ?",
+    "faq1A": "Les calculs respectent rigoureusement les normes du BIPM et du NIST avec des facteurs de conversion exacts.",
+    "faq2Q": "Quelle est la formule entre le pyeong et le mètre carré ?",
+    "faq2A": "1 pyeong équivaut exactement à 400/121 m² (environ 3,305785 m²), et 1 m² correspond à environ 0,3025 pyeong.",
+    "faq3Q": "Mes données d'utilisation sont-elles transmises à des serveurs ?",
+    "faq3A": "Jamais. Tous les calculs, historiques et favoris sont traités exclusivement en local via localStorage.",
+    "reviewDate": "Revue Éditoriale : Novembre 2026",
+    "reviewTeam": "DopaBrain Métrologie Numérique"
+  },
+  "nav": {
+    "back": "Accueil DopaBrain"
   }
 }

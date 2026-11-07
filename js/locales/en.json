@@ -109,5 +109,32 @@
     "bmiCalculator": "BMI Calculator",
     "sebatdonCalc": "Rent Calculator",
     "ddayCounter": "D-Day Counter"
+  },
+  "about": {
+    "toggle": "About Unit Converter Pro & International Metrology Standards",
+    "heading1": "International System of Units (SI) & Metrological Precision",
+    "text1": "Metrology is the scientific study of measurement. Established by the Bureau International des Poids et Mesures (BIPM), the International System of Units (SI) provides universally standardized base units (meter, kilogram, second, kelvin). This converter integrates modern SI standards with Imperial and traditional East Asian units with high floating-point precision.",
+    "boundary": "Precision Notice: Conversion calculations use standard IEEE 754 double-precision arithmetic. For critical laboratory calibration or legal surveying, consult official national standards institutes (e.g., NIST, KRISS, BIPM).",
+    "heading2": "Core Measurement Frameworks",
+    "pArea": "Area & Land Measurement:",
+    "dArea": "Converts square meters (m²) and acres with traditional Asian pyeong (1 pyeong = 400/121 m² ≈ 3.3058 m²).",
+    "pWeight": "Mass & Traditional Gold/Herb Units:",
+    "dWeight": "Bridges metric kilograms/grams with avoirdupois pounds/ounces and traditional don (3.75g) and nyang (37.5g).",
+    "pTemp": "Thermodynamic Temperature Scales:",
+    "dTemp": "Calculates affine conversions between Celsius (°C), Fahrenheit (°F = °C × 9/5 + 32), and absolute Kelvin (K).",
+    "pVolume": "Fluid & Dry Volume Metrics:",
+    "dVolume": "Computes conversions across metric liters (L), US gallons (gal), and traditional doe and hop capacities.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "How accurately are international SI and customary units converted?",
+    "faq1A": "Conversions adhere strictly to BIPM and NIST international metrology standards using exact conversion constants (e.g., 1 pound = 0.45359237 kg, 1 inch = 25.4 mm).",
+    "faq2Q": "What is the exact conversion formula between pyeong and square meters?",
+    "faq2A": "By historical East Asian metrology standards, 1 pyeong equals exactly 400/121 square meters (approximately 3.305785 m²), and 1 m² equals approximately 0.3025 pyeong.",
+    "faq3Q": "Are my conversion histories or custom favorites saved on external servers?",
+    "faq3A": "Never. All conversion operations, recent history logs, and saved favorites are processed and stored locally in your browser via localStorage with zero external server communication.",
+    "reviewDate": "Editorial Review: November 2026",
+    "reviewTeam": "DopaBrain Computational Metrology Series"
+  },
+  "nav": {
+    "back": "DopaBrain Home"
   }
 }

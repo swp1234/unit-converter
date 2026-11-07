@@ -109,5 +109,32 @@
     "bmiCalculator": "Kalkulator BMI",
     "sebatdonCalc": "Kalkulator sewa",
     "ddayCounter": "Penghitung Hari"
+  },
+  "about": {
+    "toggle": "Tentang Unit Converter Pro & Standar Metrologi Internasional",
+    "heading1": "Sistem Satuan Internasional (SI) & Presisi Pengukuran",
+    "text1": "Metrologi adalah ilmu tentang pengukuran. Ditetapkan oleh Bureau International des Poids et Mesures (BIPM), Sistem Satuan Internasional (SI) menyediakan satuan pokok standar. Konverter ini memadukan satuan SI, imperial, dan satuan tradisional Asia dengan presisi tinggi.",
+    "boundary": "Catatan Presisi: Perhitungan menggunakan standar IEEE 754 presisi ganda. Untuk kalibrasi hukum atau laboratorium resmi, rujuk lembaga standar nasional terkait.",
+    "heading2": "Empat Dimensi Pengukuran Utama",
+    "pArea": "Luas & Pengukuran Tanah:",
+    "dArea": "Mengonversi meter persegi (m²) dan acre dengan satuan tradisional pyeong (1 pyeong ≈ 3,3058 m²).",
+    "pWeight": "Massa & Satuan Tradisional:",
+    "dWeight": "Menghubungkan kilogram (kg) dan pon (lb) dengan satuan tradisional don (3,75g) dan nyang (37,5g).",
+    "pTemp": "Skala Suhu Termodinamika:",
+    "dTemp": "Menghitung konversi antara Celsius (°C), Fahrenheit (°F), dan Kelvin mutlak (K).",
+    "pVolume": "Metrik Volume Fluida & Kering:",
+    "dVolume": "Menghitung konversi antara liter (L), galon AS (gal), serta takaran tradisional.",
+    "faqTitle": "Pertanyaan yang Sering Diajukan (FAQ)",
+    "faq1Q": "Seberapa akurat konversi satuan SI dan imperial ini?",
+    "faq1A": "Perhitungan mengikuti standar BIPM dan NIST dengan konstanta konversi baku yang tepat.",
+    "faq2Q": "Berapa rumus konversi pasti antara pyeong dan meter persegi?",
+    "faq2A": "1 pyeong setara dengan 400/121 meter persegi (sekitar 3,305785 m²), dan 1 m² setara dengan sekitar 0,3025 pyeong.",
+    "faq3Q": "Apakah riwayat atau favorit saya disimpan di server luar?",
+    "faq3A": "Tidak. Seluruh data disimpan secara lokal di browser Anda via localStorage tanpa transmisi eksternal.",
+    "reviewDate": "Tinjauan Editorial: November 2026",
+    "reviewTeam": "Seri Metrologi Komputasi DopaBrain"
+  },
+  "nav": {
+    "back": "Beranda DopaBrain"
   }
 }

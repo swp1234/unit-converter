@@ -109,5 +109,32 @@
     "bmiCalculator": "Calculadora IMC",
     "sebatdonCalc": "Calculadora de alquiler",
     "ddayCounter": "Contador D-Day"
+  },
+  "about": {
+    "toggle": "Sobre Unit Converter Pro y Normas Internacionales de Metrología",
+    "heading1": "Sistema Internacional de Unidades (SI) y Precisión Metrológica",
+    "text1": "La metrología es la ciencia de las mediciones. Establecido por la Oficina Internacional de Pesas y Medidas (BIPM), el SI proporciona unidades universales (metro, kilogramo, segundo, kelvin). Este convertidor integra estándares SI, imperiales y tradicionales con alta precisión de coma flotante.",
+    "boundary": "Aviso de Precisión: Los cálculos emplean aritmética de doble precisión IEEE 754. Para calibraciones legales o científicas críticas, consulte a organismos oficiales (p. ej., BIPM, NIST, CEM).",
+    "heading2": "Cuatro Marcos de Medición",
+    "pArea": "Superficie y Medición de Tierras:",
+    "dArea": "Convierte metros cuadrados (m²) y acres con la unidad tradicional asiática pyeong (1 pyeong ≈ 3.3058 m²).",
+    "pWeight": "Masa y Unidades Tradicionales:",
+    "dWeight": "Vincula kilogramos (kg) y libras (lb) con unidades tradicionales orientales de precisión.",
+    "pTemp": "Escalas de Temperatura Termodinámica:",
+    "dTemp": "Calcula conversiones entre grados Celsius (°C), Fahrenheit (°F = °C × 9/5 + 32) y Kelvin absoluto (K).",
+    "pVolume": "Volumen de Fluidos y Secos:",
+    "dVolume": "Calcula transformaciones entre litros (L), galones estadounidenses (gal) y medidas tradicionales.",
+    "faqTitle": "Preguntas Frecuentes (FAQ)",
+    "faq1Q": "¿Qué precisión tienen las conversiones entre SI e Imperial?",
+    "faq1A": "Siguen estrictamente las normas del BIPM y NIST utilizando constantes exactas (p. ej., 1 lb = 0.45359237 kg).",
+    "faq2Q": "¿Cuál es la fórmula entre pyeong y metros cuadrados?",
+    "faq2A": "Por convención histórica, 1 pyeong equivale a 400/121 m² (aprox. 3.305785 m²), y 1 m² equivale a 0.3025 pyeong.",
+    "faq3Q": "¿Se guardan mis historiales o favoritos en servidores externos?",
+    "faq3A": "Nunca. Todo el historial y los favoritos se almacenan al 100% en el localStorage de su navegador.",
+    "reviewDate": "Revisión Editorial: Noviembre 2026",
+    "reviewTeam": "DopaBrain Metrología Computacional"
+  },
+  "nav": {
+    "back": "Inicio de DopaBrain"
   }
 }
