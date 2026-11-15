@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Conversor de Unidades Pro - Cálculo de Área, Conversão de Temperatura, Conversão de Peso | 40+ Unidades Suportadas",
-    "description": "Conversão em tempo real de 40+ unidades em 6 categorias incluindo cálculo de área, conversão de temperatura, conversão de peso e muito mais! Suporta unidades tradicionais coreanas (pyeong, don, nyang, doe). Inclui recursos de histórico e favoritos."
+    "description": "Conversão em tempo real de 40+ unidades em 6 categorias incluindo cálculo de área, conversão de temperatura, conversão de peso e muito mais! Suporta unidades tradicionais coreanas (pyeong, don, nyang, doe). Inclui recursos de histórico e favoritos.",
+    "loading": "Carregando..."
   },
   "header": {
     "title": "Conversor de Unidades Pro",
@@ -56,7 +57,8 @@
     "addFavorite": "⭐ Salvar Unidade Atual",
     "clearHistory": "Limpar Histórico",
     "premiumView": "Ver Conversões Avançadas",
-    "close": "✕"
+    "close": "✕",
+    "premium": "Ver Conversões Avançadas"
   },
   "sections": {
     "favorites": "Favoritos",
@@ -136,5 +138,30 @@
   },
   "nav": {
     "back": "Início DopaBrain"
+  },
+  "accessibility": {
+    "skipMain": "Pular para o conteúdo principal"
+  },
+  "share": {
+    "saveCard": "Salvar Cartão",
+    "twitter": "Compartilhar no X",
+    "copyUrl": "Copiar Link",
+    "shareApp": "Compartilhar Conversor",
+    "copied": "Link copiado!",
+    "cardTitle": "Cartão de Conversão de Unidades",
+    "cardSub": "Guia rápido de metrologia SI e unidades tradicionais",
+    "cleared": "Histórico de conversões limpo.",
+    "downloadStarted": "Cartão 1080×1920 salvo!"
+  },
+  "curated": {
+    "title": "Livros Recomendados de Metrologia",
+    "subtitle": "Leituras selecionadas sobre padrões de medição e engenharia de precisão",
+    "badge": "RECOMENDADO",
+    "book1Title": "The Perfectionists",
+    "book1Author": "Simon Winchester",
+    "book1Desc": "Como a engenharia de precisão e tolerâncias cada vez menores moldaram o mundo moderno.",
+    "book2Title": "The Measure of All Things",
+    "book2Author": "Ken Alder",
+    "book2Desc": "A expedição científica de sete anos por trás da criação do sistema métrico."
   }
 }

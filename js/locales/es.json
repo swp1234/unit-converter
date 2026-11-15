@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Unit Converter Pro - Conversión de Área·Temperatura·Peso | 40+ Unidades Compatibles",
-    "description": "Conversión en tiempo real de 40+ unidades en 6 categorías incluyendo cálculo de área, conversión de temperatura, conversión de peso y más. Soporta unidades tradicionales coreanas (pyeong, don, nyang, doe). Incluye características de historial y favoritos."
+    "description": "Conversión en tiempo real de 40+ unidades en 6 categorías incluyendo cálculo de área, conversión de temperatura, conversión de peso y más. Soporta unidades tradicionales coreanas (pyeong, don, nyang, doe). Incluye características de historial y favoritos.",
+    "loading": "Cargando..."
   },
   "header": {
     "title": "Unit Converter Pro",
@@ -56,7 +57,8 @@
     "addFavorite": "⭐ Guardar Unidad Actual",
     "clearHistory": "Limpiar Historial",
     "premiumView": "Ver Conversiones Avanzadas",
-    "close": "✕"
+    "close": "✕",
+    "premium": "Ver Conversiones Avanzadas"
   },
   "sections": {
     "favorites": "Favoritos",
@@ -136,5 +138,30 @@
   },
   "nav": {
     "back": "Inicio de DopaBrain"
+  },
+  "accessibility": {
+    "skipMain": "Ir al contenido principal"
+  },
+  "share": {
+    "saveCard": "Guardar Tarjeta",
+    "twitter": "Compartir en X",
+    "copyUrl": "Copiar Enlace",
+    "shareApp": "Compartir Conversor",
+    "copied": "¡Enlace copiado!",
+    "cardTitle": "Tarjeta de Conversión de Unidades",
+    "cardSub": "Guía rápida de metrología SI y unidades clásicas",
+    "cleared": "Historial de conversiones borrado.",
+    "downloadStarted": "¡Tarjeta 1080×1920 guardada!"
+  },
+  "curated": {
+    "title": "Libros Recomendados sobre Metrología",
+    "subtitle": "Lecturas seleccionadas sobre estándares de medición e ingeniería de precisión",
+    "badge": "LECTURA",
+    "book1Title": "The Perfectionists",
+    "book1Author": "Simon Winchester",
+    "book1Desc": "Cómo los ingenieros de precisión transformaron el mundo mediante tolerancias exactas.",
+    "book2Title": "The Measure of All Things",
+    "book2Author": "Ken Alder",
+    "book2Desc": "La expedición científica que dio origen al sistema métrico decimal universal."
   }
 }

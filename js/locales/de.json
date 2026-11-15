@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Einheitenumrechner Pro - Flächen·Temperatur·Gewicht Umrechnung | 40+ Einheiten unterstützt",
-    "description": "Echtzeit-Umrechnung von 40+ Einheiten über 6 Kategorien einschließlich Flächenberechnung, Temperaturumrechnung, Gewichtsumrechnung und mehr! Unterstützt koreanische Traditionseinheiten (Pyeong, Don, Nyang, Doe). Beinhaltet Verlauf und Favoriten-Funktionen."
+    "description": "Echtzeit-Umrechnung von 40+ Einheiten über 6 Kategorien einschließlich Flächenberechnung, Temperaturumrechnung, Gewichtsumrechnung und mehr! Unterstützt koreanische Traditionseinheiten (Pyeong, Don, Nyang, Doe). Beinhaltet Verlauf und Favoriten-Funktionen.",
+    "loading": "Wird geladen..."
   },
   "header": {
     "title": "Einheitenumrechner Pro",
@@ -56,7 +57,8 @@
     "addFavorite": "⭐ Aktuelle Einheit speichern",
     "clearHistory": "Verlauf löschen",
     "premiumView": "Erweiterte Umrechnungen anzeigen",
-    "close": "✕"
+    "close": "✕",
+    "premium": "Erweiterte Umrechnungen anzeigen"
   },
   "sections": {
     "favorites": "Favoriten",
@@ -136,5 +138,30 @@
   },
   "nav": {
     "back": "DopaBrain Startseite"
+  },
+  "accessibility": {
+    "skipMain": "Zum Hauptinhalt springen"
+  },
+  "share": {
+    "saveCard": "Karte speichern",
+    "twitter": "Auf X teilen",
+    "copyUrl": "Link kopieren",
+    "shareApp": "Umrechner teilen",
+    "copied": "Link kopiert!",
+    "cardTitle": "Einheiten-Referenzkarte",
+    "cardSub": "SI-Einheiten & klassische Maße im Überblick",
+    "cleared": "Verlauf wurde gelöscht.",
+    "downloadStarted": "1080×1920 Referenzkarte gespeichert!"
+  },
+  "curated": {
+    "title": "Empfohlene Bücher zu Metrologie & Präzision",
+    "subtitle": "Ausgewählte Lektüre über Messstandards und die Geschichte des metrischen Systems",
+    "badge": "BUCHTIPP",
+    "book1Title": "The Perfectionists",
+    "book1Author": "Simon Winchester",
+    "book1Desc": "Wie immer genauere Messtoleranzen die moderne Technikwelt erst möglich machten.",
+    "book2Title": "Das Maß der Welt (The Measure of All Things)",
+    "book2Author": "Ken Alder",
+    "book2Desc": "Die historische Vermessungsexpedition hinter der Einführung des Meters."
   }
 }

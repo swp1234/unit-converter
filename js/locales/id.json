@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Unit Converter Pro - Konversi Area·Suhu·Berat | 40+ Unit Didukung",
-    "description": "Konversi real-time 40+ unit di 6 kategori termasuk perhitungan area, konversi suhu, konversi berat, dan lainnya! Mendukung unit tradisional Korea (pyeong, don, nyang, doe). Mencakup fitur riwayat dan favorit."
+    "description": "Konversi real-time 40+ unit di 6 kategori termasuk perhitungan area, konversi suhu, konversi berat, dan lainnya! Mendukung unit tradisional Korea (pyeong, don, nyang, doe). Mencakup fitur riwayat dan favorit.",
+    "loading": "Memuat..."
   },
   "header": {
     "title": "Unit Converter Pro",
@@ -56,7 +57,8 @@
     "addFavorite": "⭐ Simpan Unit Saat Ini",
     "clearHistory": "Hapus Riwayat",
     "premiumView": "Lihat Konversi Tingkat Lanjut",
-    "close": "✕"
+    "close": "✕",
+    "premium": "Lihat Konversi Tingkat Lanjut"
   },
   "sections": {
     "favorites": "Favorit",
@@ -136,5 +138,30 @@
   },
   "nav": {
     "back": "Beranda DopaBrain"
+  },
+  "accessibility": {
+    "skipMain": "Lompat ke konten utama"
+  },
+  "share": {
+    "saveCard": "Simpan Kartu",
+    "twitter": "Bagikan ke X",
+    "copyUrl": "Salin Tautan",
+    "shareApp": "Bagikan Konverter",
+    "copied": "Tautan berhasil disalin!",
+    "cardTitle": "Kartu Referensi Konversi Unit",
+    "cardSub": "Panduan cepat metrologi SI dan unit tradisional",
+    "cleared": "Riwayat konversi dihapus.",
+    "downloadStarted": "Kartu referensi 1080×1920 tersimpan!"
+  },
+  "curated": {
+    "title": "Buku Rekomendasi Metrologi & Presisi",
+    "subtitle": "Bacaan pilihan tentang standar pengukuran dan teknik presisi modern",
+    "badge": "PILIHAN",
+    "book1Title": "The Perfectionists",
+    "book1Author": "Simon Winchester",
+    "book1Desc": "Bagaimana toleransi pengukuran presisi membangun teknologi dunia modern.",
+    "book2Title": "The Measure of All Things",
+    "book2Author": "Ken Alder",
+    "book2Desc": "Ekspedisi ilmiah tujuh tahun di balik lahirnya sistem metrik universal."
   }
 }

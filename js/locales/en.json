@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "Unit Converter Pro - Area·Temperature·Weight Conversion | 40+ Units Supported",
-    "description": "Real-time conversion of 40+ units across 6 categories including area calculation, temperature conversion, weight conversion, and more! Supports Korean traditional units (pyeong, don, nyang, doe). Includes history and favorites features."
+    "description": "Real-time conversion of 40+ units across 6 categories including area calculation, temperature conversion, weight conversion, and more! Supports Korean traditional units (pyeong, don, nyang, doe). Includes history and favorites features.",
+    "loading": "Loading..."
   },
   "header": {
     "title": "Unit Converter Pro",
@@ -56,7 +57,8 @@
     "addFavorite": "⭐ Save Current Unit",
     "clearHistory": "Clear History",
     "premiumView": "View Advanced Conversions",
-    "close": "✕"
+    "close": "✕",
+    "premium": "View Advanced Conversions"
   },
   "sections": {
     "favorites": "Favorites",
@@ -136,5 +138,30 @@
   },
   "nav": {
     "back": "DopaBrain Home"
+  },
+  "accessibility": {
+    "skipMain": "Skip to main content"
+  },
+  "share": {
+    "saveCard": "Save Ref Card",
+    "twitter": "Share on X",
+    "copyUrl": "Copy Link",
+    "shareApp": "Share Converter",
+    "copied": "Link copied to clipboard!",
+    "cardTitle": "Unit Conversion Reference Card",
+    "cardSub": "SI · Customary · Precision Metrology Cheat Sheet",
+    "cleared": "Conversion history cleared.",
+    "downloadStarted": "Saved 1080×1920 conversion reference card!"
+  },
+  "curated": {
+    "title": "Recommended Metrology & Precision Books",
+    "subtitle": "Curated reads on measurement standards, precision engineering, and global unit systems",
+    "badge": "BOOK PICK",
+    "book1Title": "The Perfectionists",
+    "book1Author": "Simon Winchester",
+    "book1Desc": "How precision engineers and tighter measurement tolerances built the modern technological world.",
+    "book2Title": "The Measure of All Things",
+    "book2Author": "Ken Alder",
+    "book2Desc": "The seven-year scientific expedition behind the creation of the universal metric system."
   }
 }

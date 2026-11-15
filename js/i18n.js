@@ -52,14 +52,24 @@ class I18n {
 
     updateUI() {
         document.querySelectorAll('[data-i18n]').forEach(el => {
-            el.textContent = this.t(el.getAttribute('data-i18n'));
+            const key = el.getAttribute('data-i18n');
+            const val = this.t(key);
+            if (val && val !== key && typeof val === 'string') {
+                el.textContent = val;
+            }
         });
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-            el.placeholder = this.t(el.getAttribute('data-i18n-placeholder'));
+            const key = el.getAttribute('data-i18n-placeholder');
+            const val = this.t(key);
+            if (val && val !== key && typeof val === 'string') {
+                el.placeholder = val;
+            }
         });
-        document.title = this.t('app.title');
+        const title = this.t('app.title');
+        if (title && title !== 'app.title') document.title = title;
         const meta = document.querySelector('meta[name="description"]');
-        if (meta) meta.content = this.t('app.description');
+        const desc = this.t('app.description');
+        if (meta && desc && desc !== 'app.description') meta.content = desc;
     }
 
     getCurrentLanguage() {
@@ -86,3 +96,4 @@ class I18n {
 }
 
 const i18n = new I18n();
+window.i18n = i18n;

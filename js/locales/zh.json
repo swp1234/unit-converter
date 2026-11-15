@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "单位转换器 Pro - 面积·温度·重量转换 | 支持 40+ 个单位",
-    "description": "跨6个类别实时转换40个以上的单位，包括面积计算、温度转换、重量转换等！支持韩国传统单位（平、钱、两、斗）。包括历史记录和收藏夹功能。"
+    "description": "跨6个类别实时转换40个以上的单位，包括面积计算、温度转换、重量转换等！支持韩国传统单位（平、钱、两、斗）。包括历史记录和收藏夹功能。",
+    "loading": "加载中..."
   },
   "header": {
     "title": "单位转换器 Pro",
@@ -56,7 +57,8 @@
     "addFavorite": "⭐ 保存当前单位",
     "clearHistory": "清除历史记录",
     "premiumView": "查看高级转换",
-    "close": "✕"
+    "close": "✕",
+    "premium": "查看高级转换"
   },
   "sections": {
     "favorites": "收藏夹",
@@ -136,5 +138,30 @@
   },
   "nav": {
     "back": "DopaBrain 首页"
+  },
+  "accessibility": {
+    "skipMain": "跳转到主要内容"
+  },
+  "share": {
+    "saveCard": "保存换算卡片",
+    "twitter": "分享到 X",
+    "copyUrl": "复制链接",
+    "shareApp": "分享换算器",
+    "copied": "链接已复制！",
+    "cardTitle": "单位换算速查卡片",
+    "cardSub": "国际单位制 SI 与传统计量实时换算指南",
+    "cleared": "已清空换算历史记录。",
+    "downloadStarted": "已保存 1080×1920 换算速查卡片！"
+  },
+  "curated": {
+    "title": "计量学与精密工程推荐书籍",
+    "subtitle": "深入理解国际标准单位制与精密测量演进的精选书单",
+    "badge": "精选好书",
+    "book1Title": "精确度：精密工程师如何创造现代世界",
+    "book1Author": "Simon Winchester",
+    "book1Desc": "揭示工业公差与精密测量如何一步步奠定现代科技文明的基础。",
+    "book2Title": "万物的尺度（The Measure of All Things）",
+    "book2Author": "Ken Alder",
+    "book2Desc": "记述推动国际公制米诞生的七年大地测量科学远征史。"
   }
 }

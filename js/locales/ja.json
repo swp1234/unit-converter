@@ -1,7 +1,8 @@
 {
   "app": {
     "title": "ユニットコンバーター Pro - 面積・温度・重量変換 | 40以上のユニットに対応",
-    "description": "面積計算、温度変換、重量変換など6カテゴリーの40以上のユニットをリアルタイム変換！坪、トン、両、升などの韓国伝統単位に対応。履歴とお気に入り機能付き。"
+    "description": "面積計算、温度変換、重量変換など6カテゴリーの40以上のユニットをリアルタイム変換！坪、トン、両、升などの韓国伝統単位に対応。履歴とお気に入り機能付き。",
+    "loading": "読み込み中..."
   },
   "header": {
     "title": "ユニットコンバーター Pro",
@@ -56,7 +57,8 @@
     "addFavorite": "⭐ 現在のユニットを保存",
     "clearHistory": "履歴をクリア",
     "premiumView": "高度な変換を表示",
-    "close": "✕"
+    "close": "✕",
+    "premium": "高度な変換を表示"
   },
   "sections": {
     "favorites": "お気に入り",
@@ -136,5 +138,30 @@
   },
   "nav": {
     "back": "DopaBrain ホーム"
+  },
+  "accessibility": {
+    "skipMain": "メインコンテンツへ移動"
+  },
+  "share": {
+    "saveCard": "変換カード保存",
+    "twitter": "Xで共有",
+    "copyUrl": "リンクコピー",
+    "shareApp": "変換ツール共有",
+    "copied": "リンクをコピーしました！",
+    "cardTitle": "単位変換リファレンスカード",
+    "cardSub": "国際単位系（SI）＆伝統単位クイックガイド",
+    "cleared": "変換履歴を削除しました。",
+    "downloadStarted": "1080×1920の単位変換カードを保存しました！"
+  },
+  "curated": {
+    "title": "計量学・精密工学のおすすめ書籍",
+    "subtitle": "国際単位系の成り立ちと精密測定の科学を深く学べる厳選ブックリスト",
+    "badge": "推薦図書",
+    "book1Title": "精密の歴史（The Perfectionists）",
+    "book1Author": "Simon Winchester",
+    "book1Desc": "ミクロン単位の公差と計測精度が現代テクノロジーをどう築いたかを紐解く一冊。",
+    "book2Title": "万物の尺度を求めて（The Measure of All Things）",
+    "book2Author": "Ken Alder",
+    "book2Desc": "メートル法誕生をめぐる歴史的な測量の旅と誤差の物語。"
   }
 }

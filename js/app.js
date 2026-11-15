@@ -6,7 +6,8 @@ class UnitConverterApp {
         this.favorites = [];
         this.history = [];
         this.quickConversions = [];
-        this.adIntervalCounter = 0;
+        this.hasTrackedStart = false;
+        this.lastCompleteTrackAt = 0;
         this.init();
     }
 
@@ -108,6 +109,24 @@ class UnitConverterApp {
         document.getElementById('ad-modal')?.addEventListener('click', (e) => {
             if (e.target.id === 'ad-modal' && this.adCountdown <= 0) this.closeAdModal();
         });
+
+        // Share & Story Card
+        document.getElementById('saveCardBtn')?.addEventListener('click', () => this.generateReferenceCard());
+        document.getElementById('shareTwitterBtn')?.addEventListener('click', () => this.shareTwitter());
+        document.getElementById('shareUrlBtn')?.addEventListener('click', () => this.copyShareUrl());
+        document.getElementById('share-float-btn')?.addEventListener('click', () => this.copyShareUrl(true));
+
+        // Curated book recommendations telemetry
+        document.querySelectorAll('#curated-resources-card a.curated-item').forEach(link => {
+            link.addEventListener('click', () => {
+                this.trackEvent('curated_resource_click', {
+                    app_name: 'unit-converter',
+                    resource_type: link.dataset.resourceType || 'book',
+                    item_id: link.dataset.itemId || '',
+                    lang: window.i18n?.getCurrentLanguage() || 'en'
+                });
+            });
+        });
     }
 
     // Swap buttons for primary conversions
@@ -159,6 +178,7 @@ class UnitConverterApp {
 
                 // 히스토리에 추가
                 this.addToHistory(value, from, result, to);
+                this.recordConversionTelemetry(category);
             });
         });
     }
@@ -207,12 +227,12 @@ class UnitConverterApp {
             const result = convert(input1.value, this.getUnit(input1), this.getUnit(input2), this.currentCategory);
             input2.value = result || '';
             this.addToHistory(input1.value, this.getUnit(input1), result, this.getUnit(input2));
-            this.triggerAdIfNeeded();
+            this.recordConversionTelemetry(this.currentCategory);
         } else if (!isInput1 && input2.value) {
             const result = convert(input2.value, this.getUnit(input2), this.getUnit(input1), this.currentCategory);
             input1.value = result || '';
             this.addToHistory(input2.value, this.getUnit(input2), result, this.getUnit(input1));
-            this.triggerAdIfNeeded();
+            this.recordConversionTelemetry(this.currentCategory);
         }
     }
 
@@ -350,7 +370,7 @@ class UnitConverterApp {
         const inputs = content.querySelectorAll('.unit-input');
 
         if (inputs.length < 2 || (!inputs[0].value && !inputs[1].value)) {
-            alert(window.i18n?.t('messages.enterValue') || 'Please enter a value to convert.');
+            this.showToast(window.i18n?.t('messages.enterValue') || 'Please enter a value to convert.');
             return;
         }
 
@@ -367,7 +387,7 @@ class UnitConverterApp {
         this.favorites.unshift(favorite);
         this.saveToStorage();
         this.renderFavorites();
-        alert(window.i18n?.t('messages.saved') || 'Saved!');
+        this.showToast(window.i18n?.t('messages.saved') || 'Saved!');
     }
 
     renderFavorites() {
@@ -449,11 +469,10 @@ class UnitConverterApp {
     }
 
     clearHistory() {
-        if (confirm(window.i18n?.t('messages.confirmClearHistory') || 'Delete all history?')) {
-            this.history = [];
-            this.saveToStorage();
-            this.renderHistory();
-        }
+        this.history = [];
+        this.saveToStorage();
+        this.renderHistory();
+        this.showToast(window.i18n?.t('share.cleared') || 'Conversion history cleared.');
     }
 
     toggleSection(section) {
@@ -534,17 +553,163 @@ class UnitConverterApp {
         if (modal) modal.style.display = 'none';
     }
 
-    // Ad Management
-    triggerAdIfNeeded() {
-        this.adIntervalCounter++;
-        // Show interstitial ad every 15 conversions
-        if (this.adIntervalCounter >= 15) {
-            this.adIntervalCounter = 0;
-            this.showAdModal();
+    // Clean Analytics Helper (no PII / no raw input numbers)
+    trackEvent(name, params) {
+        if (typeof gtag === 'function') {
+            gtag('event', name, params || {});
         }
     }
 
-    // 광고 강제 잠금 해제 금지 - 즉시 콜백 실행 (구글 정책 준수)
+    recordConversionTelemetry(category) {
+        const lang = window.i18n?.getCurrentLanguage() || 'en';
+        const mode = category || this.currentCategory || 'length';
+        if (!this.hasTrackedStart) {
+            this.hasTrackedStart = true;
+            this.trackEvent('test_start', {
+                app_name: 'unit-converter',
+                mode,
+                lang
+            });
+        }
+        const now = Date.now();
+        if (now - this.lastCompleteTrackAt > 800) {
+            this.lastCompleteTrackAt = now;
+            this.trackEvent('test_complete', {
+                app_name: 'unit-converter',
+                result_type: mode,
+                lang
+            });
+        }
+    }
+
+    buildShareUrl() {
+        const lang = window.i18n?.getCurrentLanguage() || 'en';
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        url.searchParams.set('utm_source', 'share');
+        return url.toString();
+    }
+
+    async copyShareUrl(allowNative = false) {
+        const lang = window.i18n?.getCurrentLanguage() || 'en';
+        const shareUrl = this.buildShareUrl();
+        const title = document.title;
+        if (allowNative && navigator.share) {
+            try {
+                await navigator.share({ title, url: shareUrl });
+                this.trackEvent('share', { method: 'native', app_name: 'unit-converter', lang });
+                return;
+            } catch (e) {
+                if (e && e.name === 'AbortError') return;
+            }
+        }
+        try {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(shareUrl);
+            }
+        } catch (e) {}
+        this.showToast(window.i18n?.t('share.copied') || 'Link copied to clipboard!');
+        this.trackEvent('share', { method: 'clipboard', app_name: 'unit-converter', lang });
+    }
+
+    shareTwitter() {
+        const lang = window.i18n?.getCurrentLanguage() || 'en';
+        const shareUrl = this.buildShareUrl();
+        const text = window.i18n?.t('header.title') || 'Unit Converter Pro';
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`;
+        window.open(twitterUrl, '_blank', 'noopener,noreferrer');
+        this.trackEvent('share', { method: 'twitter', app_name: 'unit-converter', lang });
+    }
+
+    generateReferenceCard() {
+        const canvas = document.getElementById('shareCanvas');
+        if (!canvas || !canvas.getContext) return;
+        const ctx = canvas.getContext('2d');
+        const W = 1080;
+        const H = 1920;
+        canvas.width = W;
+        canvas.height = H;
+
+        const grad = ctx.createLinearGradient(0, 0, W, H);
+        grad.addColorStop(0, '#0f172a');
+        grad.addColorStop(0.5, '#132a2e');
+        grad.addColorStop(1, '#091521');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, W, H);
+
+        // Ambient glow
+        ctx.fillStyle = 'rgba(26, 188, 156, 0.16)';
+        ctx.beginPath();
+        ctx.arc(540, 420, 380, 0, Math.PI * 2);
+        ctx.fill();
+
+        const lang = window.i18n?.getCurrentLanguage() || 'en';
+        const title = window.i18n?.t('share.cardTitle') || 'Unit Conversion Reference Card';
+        const sub = window.i18n?.t('share.cardSub') || 'SI · Customary · Precision Metrology Cheat Sheet';
+
+        ctx.fillStyle = '#1abc9c';
+        ctx.font = 'bold 34px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('DOPABRAIN METROLOGY STUDIO', W / 2, 160);
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 62px sans-serif';
+        ctx.fillText(title.slice(0, 32), W / 2, 260);
+
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '32px sans-serif';
+        ctx.fillText(sub.slice(0, 52), W / 2, 325);
+
+        const benchmarks = [
+            ['Area (Korea / SI)', '1 Pyeong = 3.3058 m²  |  1 m² = 0.3025 Pyeong'],
+            ['Mass / Weight', '1 kg = 2.2046 lb  |  1 Don = 3.75 g'],
+            ['Temperature', '°F = °C × 9/5 + 32  |  K = °C + 273.15'],
+            ['Length / Distance', '1 inch = 25.4 mm  |  1 mile = 1.6093 km'],
+            ['Volume', '1 US gal = 3.7854 L  |  1 cup = 236.6 mL'],
+            ['Speed', '100 km/h = 62.14 mph  |  1 m/s = 3.6 km/h']
+        ];
+
+        let y = 440;
+        benchmarks.forEach(([label, formula]) => {
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
+            ctx.beginPath();
+            ctx.roundRect(80, y, W - 160, 175, 26);
+            ctx.fill();
+            ctx.strokeStyle = 'rgba(26, 188, 156, 0.35)';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            ctx.textAlign = 'left';
+            ctx.fillStyle = '#f39c12';
+            ctx.font = 'bold 30px sans-serif';
+            ctx.fillText(label, 120, y + 66);
+
+            ctx.fillStyle = '#f8fafc';
+            ctx.font = 'bold 34px sans-serif';
+            ctx.fillText(formula, 120, y + 128);
+            y += 205;
+        });
+
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#1abc9c';
+        ctx.font = 'bold 34px sans-serif';
+        ctx.fillText(`dopabrain.com/unit-converter/?lang=${lang}`, W / 2, 1780);
+
+        try {
+            const link = document.createElement('a');
+            link.download = `dopabrain-unit-card-${this.currentCategory}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        } catch (e) {}
+
+        this.showToast(window.i18n?.t('share.downloadStarted') || 'Saved 1080×1920 conversion reference card!');
+        this.trackEvent('save_image', {
+            app_name: 'unit-converter',
+            result_type: this.currentCategory || 'length',
+            lang
+        });
+    }
+
     showAdModal(callback) {
         if (callback) callback();
     }
@@ -585,6 +750,7 @@ let app;
 
     // 앱 시작
     app = new UnitConverterApp();
+    window.unitConverterApp = app;
     preserveLanguageLinks();
 
     // Hide app loader
@@ -597,7 +763,8 @@ let app;
 
 function preserveLanguageLinks() {
     try {
-        const lang = (window.i18n && typeof window.i18n.getCurrentLanguage === 'function' ? window.i18n.getCurrentLanguage() : null) || new URLSearchParams(window.location.search).get('lang') || 'en';
+        const getLang = () => (window.i18n && typeof window.i18n.getCurrentLanguage === 'function' ? window.i18n.getCurrentLanguage() : null) || new URLSearchParams(window.location.search).get('lang') || 'en';
+        const lang = getLang();
         document.querySelectorAll('.related-card, a[href^="/shopping-calc/"], a[href^="/bmi-calculator/"], a[href^="/dday-counter/"], a[href^="/sebatdon-calc/"]').forEach(function(a) {
             const href = a.getAttribute('href');
             if (!href || href.startsWith('/portal/')) return;
@@ -616,7 +783,7 @@ function preserveLanguageLinks() {
                             cta_surface: 'related_tools',
                             destination: a.getAttribute('href'),
                             source: 'unit_converter_result',
-                            lang: lang || 'en'
+                            lang: getLang()
                         });
                     }
                 });

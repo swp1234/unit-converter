@@ -7,7 +7,7 @@
     <meta name="robots" content="max-image-preview:large">
     <meta name="theme-color" content="#f39c12">
     <meta name="description" content="Convert 40+ units instantly across 6 categories: length, weight, temperature, area, volume, and speed. Save favorites and view history. Try free!">
-    <meta name="dateModified" content="2026-11-07">
+    <meta name="dateModified" content="2026-11-15">
     <meta name="keywords" content="단위 변환기, 평수 계산, 제곱미터 변환, 온도 변환, 무게 변환, 길이 변환, 평 계산기, 한국 전통 단위, 국제 단위 변환">
     <title>Unit Converter Pro - Free Length, Weight, Temp | DopaBrain</title>
     <link rel="canonical" href="https://dopabrain.com/unit-converter/">
@@ -53,18 +53,18 @@
     <meta name="twitter:image" content="https://dopabrain.com/portal/img/og/unit-converter.png">
     <meta name="twitter:site" content="@dopabrain">
     <!-- hreflang for multilingual SEO -->
-    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="en" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="es" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="id" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="de" href="https://dopabrain.com/unit-converter/">
-    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/unit-converter/">
+    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/unit-converter/?lang=ko">
+    <link rel="alternate" hreflang="en" href="https://dopabrain.com/unit-converter/?lang=en">
+    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/unit-converter/?lang=zh">
+    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/unit-converter/?lang=hi">
+    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/unit-converter/?lang=ru">
+    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/unit-converter/?lang=ja">
+    <link rel="alternate" hreflang="es" href="https://dopabrain.com/unit-converter/?lang=es">
+    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/unit-converter/?lang=pt">
+    <link rel="alternate" hreflang="id" href="https://dopabrain.com/unit-converter/?lang=id">
+    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/unit-converter/?lang=tr">
+    <link rel="alternate" hreflang="de" href="https://dopabrain.com/unit-converter/?lang=de">
+    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/unit-converter/?lang=fr">
     <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/unit-converter/">
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -423,9 +423,44 @@
         <!-- Premium Button -->
         <button class="premium-btn" id="premium-btn" data-i18n="buttons.premium">Advanced Conversions</button>
 
+        <!-- Share & Story Card Actions -->
+        <div class="unit-share-bar">
+            <button type="button" class="unit-share-btn unit-card-btn" id="saveCardBtn">📸 <span data-i18n="share.saveCard">Save Ref Card</span></button>
+            <button type="button" class="unit-share-btn" id="shareTwitterBtn">𝕏 <span data-i18n="share.twitter">Share on X</span></button>
+            <button type="button" class="unit-share-btn" id="shareUrlBtn">🔗 <span data-i18n="share.copyUrl">Copy Link</span></button>
+        </div>
+        <canvas id="shareCanvas" width="1080" height="1920" style="display:none;" aria-hidden="true"></canvas>
+
+        <!-- Curated Metrology & Precision Books -->
+        <section class="curated-resources-card" id="curated-resources-card" aria-label="Recommended Metrology Books">
+            <div class="curated-card-header">
+                <span class="curated-badge" data-i18n="curated.badge">BOOK PICK</span>
+                <h2 data-i18n="curated.title">Recommended Metrology &amp; Precision Books</h2>
+                <p data-i18n="curated.subtitle">Curated reads on measurement standards, precision engineering, and global unit systems</p>
+            </div>
+            <div class="curated-list">
+                <a href="https://www.amazon.com/dp/0062652567?tag=dopabrain-20" target="_blank" rel="sponsored noopener noreferrer" class="curated-item" data-item-id="perfectionists-winchester" data-resource-type="book">
+                    <span class="curated-icon" aria-hidden="true">📐</span>
+                    <div class="curated-info">
+                        <strong data-i18n="curated.book1Title">The Perfectionists</strong>
+                        <span class="curated-author" data-i18n="curated.book1Author">Simon Winchester</span>
+                        <span class="curated-desc" data-i18n="curated.book1Desc">How precision engineers and tighter measurement tolerances built the modern technological world.</span>
+                    </div>
+                </a>
+                <a href="https://www.amazon.com/dp/074321675X?tag=dopabrain-20" target="_blank" rel="sponsored noopener noreferrer" class="curated-item" data-item-id="measure-of-all-things" data-resource-type="book">
+                    <span class="curated-icon" aria-hidden="true">🌍</span>
+                    <div class="curated-info">
+                        <strong data-i18n="curated.book2Title">The Measure of All Things</strong>
+                        <span class="curated-author" data-i18n="curated.book2Author">Ken Alder</span>
+                        <span class="curated-desc" data-i18n="curated.book2Desc">The seven-year scientific expedition behind the creation of the universal metric system.</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
         <!-- Science & E-E-A-T Metrology Guide Section -->
         <section class="about-section collapsible-section" id="about-section" style="max-width:680px;margin:28px auto;padding:0 16px;">
-            <details style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
+            <details open style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
                 <summary data-i18n="about.toggle" style="min-height:48px;padding:14px 18px;color:#f39c12;cursor:pointer;font-size:15px;font-weight:700;list-style:none;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;touch-action:manipulation;">About Unit Converter Pro & International Metrology Standards</summary>
                 <div class="about-content" style="padding:0 18px 20px;box-sizing:border-box;">
                     <h2 data-i18n="about.heading1" style="font-size:15px;color:#fff;margin:14px 0 8px;font-weight:700;border-left:3px solid #f39c12;padding-left:8px;">International System of Units (SI) & Metrological Precision</h2>
@@ -485,14 +520,14 @@
             navigator.serviceWorker.register('sw.js').catch(e => console.log('SW error:', e));
         }
     </script>
-    <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button onclick="(async()=>{const u=location.href,t=document.title;if(typeof gtag==='function')gtag('event','share',{method:navigator.share?'native':'clipboard',app_name:'unit-converter'});if(navigator.share){try{await navigator.share({title:t,url:u})}catch(e){}}else{await navigator.clipboard.writeText(u);this.textContent='✅';setTimeout(()=>this.textContent='📤',1500)}})()" style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
+    <div id="share-float" style="position:fixed;bottom:80px;right:16px;z-index:99"><button type="button" id="share-float-btn" aria-label="Share converter" style="width:48px;height:48px;min-width:48px;min-height:48px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(8px)">📤</button></div>
     <div style="max-width:420px;margin:20px auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
       <h3 data-i18n="related.title" style="font-size:16px;color:#a0a0b8;margin-bottom:12px;text-align:center;">More to Explore</h3>
       <div style="display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:10px;">
-        <a href="/shopping-calc/" class="related-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;min-width:0;box-sizing:border-box;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">🛒</span><span data-i18n="related.shoppingCalc" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;word-break:break-word;">Shopping Calc</span></a>
-        <a href="/bmi-calculator/" class="related-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;min-width:0;box-sizing:border-box;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">📏</span><span data-i18n="related.bmiCalculator" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;word-break:break-word;">BMI Calculator</span></a>
-        <a href="/dday-counter/" class="related-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;min-width:0;box-sizing:border-box;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">📅</span><span data-i18n="related.ddayCounter" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;word-break:break-word;">D-Day Counter</span></a>
-        <a href="/sebatdon-calc/" class="related-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;min-width:0;box-sizing:border-box;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">🏠</span><span data-i18n="related.sebatdonCalc" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;word-break:break-word;">Rent Calculator</span></a>
+        <a href="/shopping-calc/" class="related-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;min-width:44px;box-sizing:border-box;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">🛒</span><span data-i18n="related.shoppingCalc" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;word-break:break-word;">Shopping Calc</span></a>
+        <a href="/bmi-calculator/" class="related-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;min-width:44px;box-sizing:border-box;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">📏</span><span data-i18n="related.bmiCalculator" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;word-break:break-word;">BMI Calculator</span></a>
+        <a href="/dday-counter/" class="related-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;min-width:44px;box-sizing:border-box;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">📅</span><span data-i18n="related.ddayCounter" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;word-break:break-word;">D-Day Counter</span></a>
+        <a href="/sebatdon-calc/" class="related-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;min-width:44px;box-sizing:border-box;gap:6px;padding:14px 8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-decoration:none;color:#fff;"><span style="font-size:28px;">🏠</span><span data-i18n="related.sebatdonCalc" style="font-size:12px;font-weight:600;color:#a0a0b8;text-align:center;word-break:break-word;">Rent Calculator</span></a>
       </div>
     </div>
     <script src="/portal/js/cross-promo.js" defer></script>
