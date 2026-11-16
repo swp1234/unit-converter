@@ -322,9 +322,26 @@ class UnitConverterApp {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const text = `${conv.fromUnit} → ${conv.toUnit}`;
-                navigator.clipboard.writeText(text).then(() => {
-                    this.showToast(window.i18n?.t('messages.copied') || 'Copied!');
-                });
+                const msg = window.i18n?.t('messages.copied') || 'Copied!';
+                const execCopy = () => {
+                    try {
+                        const ta = document.createElement('textarea');
+                        ta.value = text;
+                        ta.setAttribute('readonly', '');
+                        ta.style.position = 'fixed';
+                        ta.style.opacity = '0';
+                        document.body.appendChild(ta);
+                        ta.select();
+                        const ok = document.execCommand('copy');
+                        document.body.removeChild(ta);
+                        if (ok) this.showToast(msg);
+                    } catch (err) {}
+                };
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).then(() => this.showToast(msg)).catch(execCopy);
+                } else {
+                    execCopy();
+                }
             });
 
             item.appendChild(span);
