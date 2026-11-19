@@ -163,5 +163,11 @@
     "book2Title": "The Measure of All Things",
     "book2Author": "Ken Alder",
     "book2Desc": "Ekspedisi ilmiah tujuh tahun di balik lahirnya sistem metrik universal."
+  },
+  "nextStep": {
+    "label": "Langkah Berikutnya",
+    "title": "Tes Tingkat Stres & Rencana 7 Hari",
+    "desc": "Cek keseimbangan stresmu di 5 area dan buat rencana pemulihan 7 hari gratis.",
+    "cta": "Mulai Tes Stres →"
   }
 }

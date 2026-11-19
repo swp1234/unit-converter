@@ -163,5 +163,11 @@
     "book2Title": "万物の尺度を求めて（The Measure of All Things）",
     "book2Author": "Ken Alder",
     "book2Desc": "メートル法誕生をめぐる歴史的な測量の旅と誤差の物語。"
+  },
+  "nextStep": {
+    "label": "おすすめの次のステップ",
+    "title": "ストレスレベル診断＆7日間プラン",
+    "desc": "5つの領域で現在のストレス状態をチェックし、7日間の回復プランを作りましょう。",
+    "cta": "ストレス診断へ →"
   }
 }

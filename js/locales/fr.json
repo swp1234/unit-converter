@@ -163,5 +163,11 @@
     "book2Title": "Mesurer le monde (The Measure of All Things)",
     "book2Author": "Ken Alder",
     "book2Desc": "L'expédition scientifique de sept ans à l'origine du système métrique universel."
+  },
+  "nextStep": {
+    "label": "Prochaine étape recommandée",
+    "title": "Test de Stress & Plan 7 Jours",
+    "desc": "Évaluez votre équilibre de stress sur 5 axes et recevez un plan sur 7 jours.",
+    "cta": "Tester mon stress →"
   }
 }

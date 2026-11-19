@@ -163,5 +163,11 @@
     "book2Title": "The Measure of All Things",
     "book2Author": "Ken Alder",
     "book2Desc": "A expedição científica de sete anos por trás da criação do sistema métrico."
+  },
+  "nextStep": {
+    "label": "Próximo passo recomendado",
+    "title": "Teste de Estresse e Plano 7 Dias",
+    "desc": "Avalie seu equilíbrio de estresse em 5 áreas e monte um plano gratuito de 7 dias.",
+    "cta": "Fazer Teste de Estresse →"
   }
 }

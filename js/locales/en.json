@@ -163,5 +163,11 @@
     "book2Title": "The Measure of All Things",
     "book2Author": "Ken Alder",
     "book2Desc": "The seven-year scientific expedition behind the creation of the universal metric system."
+  },
+  "nextStep": {
+    "label": "Recommended Next Step",
+    "title": "Stress Level Check & 7-Day Plan",
+    "desc": "Check your current stress balance across 5 areas and build a private 7-day reset plan.",
+    "cta": "Take Stress Check →"
   }
 }

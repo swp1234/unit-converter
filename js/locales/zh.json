@@ -163,5 +163,11 @@
     "book2Title": "万物的尺度（The Measure of All Things）",
     "book2Author": "Ken Alder",
     "book2Desc": "记述推动国际公制米诞生的七年大地测量科学远征史。"
+  },
+  "nextStep": {
+    "label": "推荐下一步",
+    "title": "压力水平自测与7天重置方案",
+    "desc": "从5个维度评估当前压力负荷，免费生成专属7天恢复计划。",
+    "cta": "开始压力测试 →"
   }
 }
